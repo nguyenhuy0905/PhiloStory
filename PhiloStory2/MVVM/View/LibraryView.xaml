@@ -13,7 +13,7 @@
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="150" ></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="350"></RowDefinition>
+                <RowDefinition Height="550"></RowDefinition>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0"
                    VerticalAlignment="Center"
@@ -32,64 +32,244 @@
                    FontSize="24">
             <Bold>Other topics</Bold>
             </TextBlock>
-            <RadioButton Grid.Row="1"
+            <Grid Grid.Row="1">
+                <RadioButton Grid.Row="1"
                          Width="110"
                          Height="110" 
                          Margin="20,20,870,20"
                          Style="{StaticResource YourTopicRadioButton}"
                          >
-                
-            </RadioButton>
-            <RadioButton Grid.Row="1"
+
+                </RadioButton>
+                <RadioButton Grid.Row="1"
                          Width="110"
                          Height="110" 
                          Margin="160,20,755,20"
                          Style="{StaticResource YourTopicRadioButton}"
                          >
 
-            </RadioButton>
-            <RadioButton Grid.Row="1"
+                </RadioButton>
+                <RadioButton Grid.Row="1"
                          Width="110"
                          Height="110" 
                          Margin="300,20,640,20"
                          Style="{StaticResource YourTopicRadioButton}">
-                
 
 
-            </RadioButton>
-            <RadioButton Grid.Row="1"
+
+                </RadioButton>
+                <RadioButton Grid.Row="1"
                          Width="110"
                          Height="110" 
                          Margin="440,20,480,20"
                          Style="{StaticResource YourTopicRadioButton}"
                          >
 
-            </RadioButton>
-            <RadioButton Grid.Row="1"
+                </RadioButton>
+                <RadioButton Grid.Row="1"
                          Width="110"
                          Height="110" 
                          Margin="580,20,330,20" 
                          Style="{StaticResource YourTopicRadioButton}"
                          >
 
-            </RadioButton>
-            <RadioButton Grid.Row="1"
+                </RadioButton>
+                <RadioButton Grid.Row="1"
                          Width="110"
                          Height="110" 
                          Margin="720,20,200,20"
                          Style="{StaticResource YourTopicRadioButton}"
                          >
 
-            </RadioButton>
-            
-            <RadioButton Grid.Row="1"
+                </RadioButton>
+
+                <RadioButton Grid.Row="1"
                          Width="110"
                          Height="110" 
                          Margin="860,20,90,20"
                          Style="{StaticResource YourTopicRadioButton}"
                          >
-
-            </RadioButton>
+                </RadioButton>
+            </Grid>
+            <Grid Grid.Row="3" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,20,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                         >
+                    </RadioButton>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,0,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                         >
+                    </RadioButton>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,0,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                        >
+                    </RadioButton>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,0,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                        >
+                    </RadioButton>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,20,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                         >
+                    </RadioButton>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,0,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                         >
+                    </RadioButton>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,0,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                        >
+                    </RadioButton>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,0,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                        >
+                    </RadioButton>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,20,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                         >
+                    </RadioButton>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,0,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                         >
+                    </RadioButton>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,0,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                        >
+                    </RadioButton>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,0,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                        >
+                    </RadioButton>
+                </StackPanel>
+                <StackPanel Grid.Column="3">
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,20,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                         >
+                    </RadioButton>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,0,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                         >
+                    </RadioButton>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,0,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                        >
+                    </RadioButton>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,0,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                        >
+                    </RadioButton>
+                </StackPanel>
+                <StackPanel Grid.Column="4">
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,20,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                         >
+                    </RadioButton>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,0,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                         >
+                    </RadioButton>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,0,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                        >
+                    </RadioButton>
+                    <RadioButton Grid.Row="0"
+                        Width="115"
+                        Height="115" 
+                        Margin="20,0,20,20"   
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource YourTopicRadioButton}"
+                        >
+                    </RadioButton>
+                </StackPanel>
+            </Grid>
         </Grid>
     </ScrollViewer>
 

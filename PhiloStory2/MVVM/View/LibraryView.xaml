@@ -14,6 +14,7 @@
                 <RowDefinition Height="150" ></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="550"></RowDefinition>
+                <RowDefinition Height="200"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0"
                    VerticalAlignment="Center"
@@ -21,15 +22,18 @@
                    Width="980"
                    Height="40"
                    Margin="20,10,0,0"
-                   FontSize="24"><Bold>Your Topics</Bold>
+                   FontSize="24"
+                       FontFamily="{StaticResource Philosopher}"><Bold>Your Topics</Bold>
             </TextBlock>
+            <TextBox Grid.Row="2" Style="{StaticResource SearchBar}" Width="300" Margin="5,5,10,5" HorizontalAlignment="Right"/>
             <TextBlock Grid.Row="2"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Left"
                    Width="980"
                    Height="40"
                    Margin="20,10,0,0"
-                   FontSize="24">
+                   FontSize="24"
+                       FontFamily="{StaticResource Philosopher}">
             <Bold>Other topics</Bold>
             </TextBlock>
             <Grid Grid.Row="1">
@@ -270,6 +274,7 @@
                     </RadioButton>
                 </StackPanel>
             </Grid>
+            <ContentControl Grid.Row="4" Content="{Binding FooterView}"/>
         </Grid>
     </ScrollViewer>
 

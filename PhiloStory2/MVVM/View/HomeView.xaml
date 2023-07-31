@@ -5,9 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PhiloStory2.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="1600" d:DesignWidth="1000">
+             d:DesignHeight="1400" d:DesignWidth="1000">
     <UserControl.Resources>
-        <FontFamily x:Key="Philosopher">/Assets/Fonts/#Philosopher</FontFamily>
+        
     </UserControl.Resources>
     
     <Border>
@@ -20,7 +20,7 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1200"/>
-                    <RowDefinition/>
+                    <RowDefinition Height="200"/>
                 </Grid.RowDefinitions>
                 <StackPanel>
                     <Grid Height="300">
@@ -61,7 +61,7 @@
 
                     <Grid Height="300">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="400"/>
                             <ColumnDefinition Width="6*"/>
                         </Grid.ColumnDefinitions>
                         <Border Margin="45" Background="#f2f2f2"
@@ -88,7 +88,7 @@
                     <Grid Height="300" Background="#759EB8">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="6*"/>
-                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="400"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Margin="5" TextWrapping="Wrap" FontFamily="{StaticResource Philosopher}">
                         <Run FontSize="35" FontWeight="Bold" FontStyle="Italic">
@@ -104,7 +104,7 @@
                             BorderBrush="Gray" BorderThickness="2"></Border>
                     </Grid>
                 </StackPanel>
-
+                <ContentControl Grid.Row="1" VerticalAlignment="Top" Height="200" Content="{Binding FooterView}"/>
 
             </Grid>
         </ScrollViewer>

@@ -7,7 +7,7 @@
                     <Border CornerRadius="5" Background="#f2f2f2" Width="auto" Height="auto">
                         <Grid>
                             <TextBox x:Name="SearchBox" Margin="2" Text="{TemplateBinding Text}" BorderThickness="0" Background="Transparent" Padding="5"/>
-                            <TextBlock IsHitTestVisible="False" Text="🔎 Search..." 
+                            <TextBlock IsHitTestVisible="False" Text="🔎 Search..." Foreground="Gray"
                                        VerticalAlignment="Center" Margin="10,0,0,0" HorizontalAlignment="Left">
                                 <TextBlock.Style>
                                     <Style TargetType="{x:Type TextBlock}">

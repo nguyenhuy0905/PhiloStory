@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +24,17 @@ namespace PhiloStory2.MVVM.View
 		public HomeView()
 		{
 			InitializeComponent();
+		}
+
+		private void Rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+		{
+			Rectangle.Visibility = Visibility.Hidden;			
+		}
+
+		private void svHorizontal_IsMouseDirectlyOverChanged(object sender, DependencyPropertyChangedEventArgs e)
+		{
+			if (!svHorizontal.IsMouseDirectlyOver) {Thread.Sleep(100);  Rectangle.Visibility = Visibility.Visible; }
+				
 		}
 	}
 }

@@ -5,19 +5,109 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PhiloStory2.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="1350" d:DesignWidth="800">
-    <ScrollViewer VerticalScrollBarVisibility="Hidden">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1200"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <StackPanel>
-                <TextBlock Text="Home" Foreground="White" FontSize="30"/>
-            </StackPanel>            
-            
-            
-        </Grid>
-        
-    </ScrollViewer>
+             d:DesignHeight="1600" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <FontFamily x:Key="Philosopher">/Assets/Fonts/#Philosopher</FontFamily>
+    </UserControl.Resources>
+    
+    <Border>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+            <ScrollViewer.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </ScrollViewer.Resources>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1200"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel>
+                    <Grid Height="300">
+                        <Border Width="500" Height="200" BorderThickness="3"
+                            BorderBrush="#ffd381" VerticalAlignment="Center" HorizontalAlignment="Center"
+                            Background="#f5deb3">
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   FontSize="45" Foreground="Black" FontWeight="Bold"
+                                   Text="'I think, therefore I am'" FontStyle="Italic" FontFamily="{StaticResource Philosopher}"/>
+                        </Border>
+                    </Grid>
+
+                    <Grid Height="300" Background="#759EB8">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="9*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock FontSize="25" FontWeight="ExtraBold"
+                                   Text="Tìm hiểu về những tư tưởng lớn của triết học qua những câu chuyện nhỏ..." FontFamily="{StaticResource Philosopher}"/>
+                            <Rectangle Margin="0,0,0,15" Name="Rectangle" Panel.ZIndex="1" Grid.Row="1" Fill="Transparent" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+                            <ScrollViewer IsMouseDirectlyOverChanged="svHorizontal_IsMouseDirectlyOverChanged" Name="svHorizontal" Grid.Row="1" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                    <Border Height="200" Width="200" Margin="10"
+                                    Background="#bcbcbc"></Border>
+                                    <Border Height="200" Width="200" Margin="10"
+                                    Background="#bcbcbc"></Border>
+                                    <Border Height="200" Width="200" Margin="10"
+                                    Background="#bcbcbc"></Border>
+                                    <Border Height="200" Width="200" Margin="10"
+                                    Background="#bcbcbc"></Border>
+                                    <Border Height="200" Width="200" Margin="10"
+                                    Background="#bcbcbc"></Border>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </Grid>
+                    </Grid>
+
+                    <Grid Height="300">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Margin="45" Background="#f2f2f2"
+                            BorderBrush="Gray" BorderThickness="2"></Border>
+                        <TextBlock Grid.Column="1" TextWrapping="Wrap" Margin="5" FontFamily="{StaticResource Philosopher}">
+                        <Run FontSize="35" FontWeight="Bold" FontStyle="Italic">
+                            Tìm hiểu về Triết học một cách dễ dàng, cụ thể
+                        </Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run FontSize="25">
+                            Các bạn học sinh cấp 2, cấp 3 có thể tìm hiểu về Triết học qua nhiều chủ đề da dạng
+                        </Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run FontSize="25">
+                            Sử dụng mục "Library", các bạn có thể tìm kiếm chủ đề, bài viết mình yêu thích
+                        </Run>
+                        </TextBlock>
+                    </Grid>
+
+                    <Grid Height="300" Background="#759EB8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="6*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Margin="5" TextWrapping="Wrap" FontFamily="{StaticResource Philosopher}">
+                        <Run FontSize="35" FontWeight="Bold" FontStyle="Italic">
+                            Sử dụng Triết học để phong phú cuộc sống
+                        </Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run FontSize="25">
+                            Mục "Activities" cung cấp những hoạt động bổ ích cho người dùng sử dụng để áp dụng Triết học vào đời sống như: tư duy, viết nhật kí...
+                        </Run>
+                        </TextBlock>
+                        <Border Grid.Column="1" Margin="45" Background="#f2f2f2"
+                            BorderBrush="Gray" BorderThickness="2"></Border>
+                    </Grid>
+                </StackPanel>
+
+
+            </Grid>
+        </ScrollViewer>
+    </Border>
+    
 </UserControl>

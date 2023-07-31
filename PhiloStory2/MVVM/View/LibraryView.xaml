@@ -6,9 +6,30 @@
              xmlns:local="clr-namespace:PhiloStory2.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <ScrollViewer VerticalScrollBarVisibility="Hidden">
-        <StackPanel>
-            <TextBlock Text="Library" FontSize="30" Foreground="White"/>
-        </StackPanel>
-    </ScrollViewer>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="350"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Width="980"
+                   Height="40"
+                   Margin="20,10,0,0"
+                   FontSize="24"><Bold>Your Topics</Bold> 
+        </TextBlock>
+        <TextBlock Grid.Row="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Width="980"
+                   Height="40"
+                   Margin="20,10,0,0"
+                   FontSize="24">
+            <Bold>Other topics</Bold>
+        </TextBlock>
+        
+    </Grid>
 </UserControl>

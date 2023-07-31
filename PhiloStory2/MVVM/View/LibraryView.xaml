@@ -8,7 +8,7 @@
              d:DesignHeight="800" d:DesignWidth="1000"
              Background="#F2EFC7">
     <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled">
-        <Grid Height="800">
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="150" ></RowDefinition>

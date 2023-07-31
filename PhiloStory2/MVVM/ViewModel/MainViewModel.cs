@@ -34,7 +34,7 @@ namespace PhiloStory2.MVVM.ViewModel
 
 			NavHomeCommand = new(o =>
 			{
-				CurrentView = HomeVM;
+				CurrentView = HomeVM;				
 			});
 			NavLibraryCommand = new(o =>
 			{

@@ -8,10 +8,7 @@
              d:DesignHeight="200" d:DesignWidth="1000">
 
     <UserControl.Resources>
-        <Style TargetType="Button" x:Key="btnSocialMediaConnect">
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Background" Value="Transparent"/>
-        </Style>
+        
     </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -27,8 +24,12 @@
 
         
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
-            <TextBlock Height="100" Width="100" Margin="10,0,0,0"
-                       Text="💡" FontSize="80" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Height="100" Width="100" Margin="10,0,0,0"
+                       FontSize="80" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label.Content>
+                    <Image Source="/Assets/Images/mainicon.png"/>
+                </Label.Content>
+            </Label>
             <TextBlock Height="125" Width="250" TextWrapping="Wrap">
                 <Run FontSize="25" FontWeight="Bold" FontFamily="{StaticResource Philosopher}">
                     PhiloStory
@@ -67,21 +68,28 @@
         <StackPanel Grid.Column="5" Margin="20,30,0,0">
             <Label FontFamily="{StaticResource Philosopher}" FontSize="25" Content="Kết nối với chúng tôi qua" FontWeight="Bold"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                <Button Style="{StaticResource btnSocialMediaConnect}">
-                    <Button.Content>
-                        <Image Margin="5" Width="50" Height="50" Source="/Assets/Images/fbicon.png"/>
-                    </Button.Content>
-                </Button>
-                <Button Style="{StaticResource btnSocialMediaConnect}">
-                    <Button.Content>
-                        <Image Margin="5" Width="50" Height="50" Source="/Assets/Images/igicon.png"/>
-                    </Button.Content>
-                </Button>
-                <Button Style="{StaticResource btnSocialMediaConnect}">
-                    <Button.Content>
-                        <Image Margin="5" Width="50" Height="50" Source="/Assets/Images/yticon.png"/>
-                    </Button.Content>
-                </Button>
+                <Border Style="{StaticResource MediaButtonAnimation}">
+                    <Button Style="{StaticResource btnSocialMediaConnect}">
+                        <Button.Content>
+                            <Image Margin="5" Width="50" Height="50" Source="/Assets/Images/fbicon.png"/>
+                        </Button.Content>
+                    </Button>
+                </Border>
+                <Border Style="{StaticResource MediaButtonAnimation}">
+                    <Button Style="{StaticResource btnSocialMediaConnect}">
+                        <Button.Content>
+                            <Image Margin="5" Width="50" Height="50" Source="/Assets/Images/igicon.png"/>
+                        </Button.Content>
+                    </Button>
+                </Border>
+                <Border Style="{StaticResource MediaButtonAnimation}">
+                    <Button Style="{StaticResource btnSocialMediaConnect}">
+                        <Button.Content>
+                            <Image Margin="5" Width="50" Height="50" Source="/Assets/Images/yticon.png"/>
+                        </Button.Content>
+                    </Button>
+                </Border> 
+                
             </StackPanel>
             
         </StackPanel>

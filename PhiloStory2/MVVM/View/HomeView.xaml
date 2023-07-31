@@ -7,11 +7,34 @@
              mc:Ignorable="d" 
              d:DesignHeight="1400" d:DesignWidth="1000">
     <UserControl.Resources>
-        
+        <Style x:Key="TitleAnimation" TargetType="Border">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.5" Storyboard.TargetProperty="(Border.Height)" To="210"/>
+                                <DoubleAnimation Duration="0:0:0.5" Storyboard.TargetProperty="(Border.Width)" To="525"/>
+                                <ColorAnimation Duration="0:0:0.5" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" To="#ffd381"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.25" Storyboard.TargetProperty="(Border.Height)" To="200"/>
+                                <DoubleAnimation Duration="0:0:0.25" Storyboard.TargetProperty="(Border.Width)" To="500"/>
+                                <ColorAnimation Duration="0:0:0.25" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" To="#f5deb3"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </UserControl.Resources>
     
     <Border>
-        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+        <ScrollViewer  VerticalScrollBarVisibility="Hidden">
             <ScrollViewer.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -24,7 +47,7 @@
                 </Grid.RowDefinitions>
                 <StackPanel>
                     <Grid Height="300">
-                        <Border Width="500" Height="200" BorderThickness="3"
+                        <Border Style="{StaticResource TitleAnimation}" Width="500" Height="200" BorderThickness="3" CornerRadius="10"
                             BorderBrush="#ffd381" VerticalAlignment="Center" HorizontalAlignment="Center"
                             Background="#f5deb3">
                             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -41,8 +64,7 @@
                             </Grid.RowDefinitions>
                             <TextBlock FontSize="25" FontWeight="ExtraBold"
                                    Text="Tìm hiểu về những tư tưởng lớn của triết học qua những câu chuyện nhỏ..." FontFamily="{StaticResource Philosopher}"/>
-                            <Rectangle Margin="0,0,0,15" Name="Rectangle" Panel.ZIndex="1" Grid.Row="1" Fill="Transparent" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
-                            <ScrollViewer IsMouseDirectlyOverChanged="svHorizontal_IsMouseDirectlyOverChanged" Name="svHorizontal" Grid.Row="1" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible">
+                            <ScrollViewer PreviewMouseWheel="ScrollViewer_PreviewMouseWheel" Name="svHorizontal" Grid.Row="1" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible" Margin="0">
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
                                     <Border Height="200" Width="200" Margin="10"
                                     Background="#bcbcbc"></Border>

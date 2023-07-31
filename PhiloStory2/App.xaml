@@ -10,6 +10,9 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/SearchBarTheme.xaml"/>
                 <ResourceDictionary Source="Theme/PhilosopherFont.xaml"/>
+                <ResourceDictionary Source="Theme/LibControlTheme.xaml"/>
+                <ResourceDictionary Source="Theme/NavigateButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/MediaButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
                 <view:HomeView/>

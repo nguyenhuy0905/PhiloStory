@@ -16,6 +16,7 @@
     <None Remove="Assets\Fonts\Philosopher-Regular.otf" />
     <None Remove="Assets\Images\fbicon.png" />
     <None Remove="Assets\Images\igicon.png" />
+    <None Remove="Assets\Images\mainicon.png" />
     <None Remove="Assets\Images\yticon.png" />
   </ItemGroup>
 
@@ -46,6 +47,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Images\igicon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\mainicon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Images\yticon.png">

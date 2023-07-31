@@ -10,24 +10,8 @@
         Height="600" Width="1000">
       
     <Window.Resources>
-        <Style x:Key="OpButton" TargetType="Button">
-            <Setter Property="Width" Value="20"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontSize" Value="10"/>
-            <Setter Property="BorderBrush" Value="#6a99a4"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-        </Style>
-        <Style x:Key="NavButton" TargetType="Button">
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Width" Value="100"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Margin" Value="3"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="BorderThickness" Value="0,0,0,0"/>
-            <Setter Property="BorderBrush" Value="#6a99a4"/>
-        </Style>
+        
+        
     </Window.Resources>
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0" ResizeBorderThickness="0" CornerRadius="0"/>
@@ -67,19 +51,31 @@
             <Rectangle Grid.ColumnSpan="2" Fill="#96C4C3" Grid.Row="1"/>
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
                 <Button x:Name="btnIcon" Style="{StaticResource NavButton}" 
-                    Width="50" Content="💡" BorderThickness="0"
+                    Width="50" BorderThickness="0"
+                    Command="{Binding NavHomeCommand}">
+                    <Button.Content>
+                        <Image Source="/Assets/Images/mainicon.png"/>
+                    </Button.Content>
+                </Button>
+                <Border Style="{StaticResource NavButtonAnimation}">
+                    <Button x:Name="btnHome" Style="{StaticResource NavButton}" Content="Home" 
                     Command="{Binding NavHomeCommand}"/>
-                <Button x:Name="btnHome" Style="{StaticResource NavButton}" Content="Home" 
-                    Command="{Binding NavHomeCommand}"/>
+                </Border>
                 <Rectangle Width="1" Margin="0,5,0,5" Fill="LightGray"/>
-                <Button x:Name="btnLib" Style="{StaticResource NavButton}" Content="Library" 
+                <Border Style="{StaticResource NavButtonAnimation}">
+                    <Button x:Name="btnLib" Style="{StaticResource NavButton}" Content="Library" 
                     Command="{Binding NavLibraryCommand}"/>
+                </Border>
                 <Rectangle Width="1" Margin="0,5,0,5" Fill="LightGray"/>
-                <Button x:Name="btnAct" Style="{StaticResource NavButton}" Content="Activity"
+                <Border Style="{StaticResource NavButtonAnimation}">
+                    <Button x:Name="btnAct" Style="{StaticResource NavButton}" Content="Activity"
                     Command="{Binding NavActivityCommand}"/>
+                </Border>
                 <Rectangle Width="1" Margin="0,5,0,5" Fill="LightGray"/>
-                <Button x:Name="btnSetting" Style="{StaticResource NavButton}" Content="Settings"
+                <Border Style="{StaticResource NavButtonAnimation}">
+                    <Button x:Name="btnSetting" Style="{StaticResource NavButton}" Content="Settings"
                     Command="{Binding NavSettingCommand}"/>
+                </Border>
             </StackPanel>
             <Border Grid.Row="2" Grid.ColumnSpan="2" BorderThickness="5,0,5,5" BorderBrush="#96C4C3" CornerRadius="0,0,5,5">
                 

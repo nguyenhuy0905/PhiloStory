@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Shapes;
 
 namespace PhiloStory2.MVVM.View
@@ -16,15 +17,21 @@ namespace PhiloStory2.MVVM.View
 			InitializeComponent();
 		}
 
-		private void Rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+		private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
 		{
-			Rectangle.Visibility = Visibility.Hidden;			
-		}
+			if (sender is ScrollViewer && !e.Handled)
+			{
+				e.Handled = true;
+				var eventArg = new MouseWheelEventArgs(e.MouseDevice, e.Timestamp, e.Delta);
 
-		private void svHorizontal_IsMouseDirectlyOverChanged(object sender, DependencyPropertyChangedEventArgs e)
-		{
-			if (!svHorizontal.IsMouseDirectlyOver) {Thread.Sleep(100);  Rectangle.Visibility = Visibility.Visible; }
-				
+				eventArg.RoutedEvent = UIElement.MouseWheelEvent;
+
+				eventArg.Source = sender;
+
+				var parent = ((Control)sender).Parent as UIElement;
+
+				parent.RaiseEvent(eventArg);
+			}
 		}
 	}
 }

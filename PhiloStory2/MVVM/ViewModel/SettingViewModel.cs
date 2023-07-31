@@ -1,12 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PhiloStory2.Core;
 
 namespace PhiloStory2.MVVM.ViewModel
 {
-	internal class SettingViewModel
+	internal class SettingViewModel : ObservableObject
 	{
+		public FooterViewModel FooterVM { get; set; }
+
+		private object footerView;
+
+		public object FooterView
+		{
+			get { return footerView; }
+			set { footerView = value;
+				OnPropertyChanged();
+			}
+		}
+
+
+		public SettingViewModel() {
+		    FooterVM = new FooterViewModel();
+			FooterView = FooterVM;
+		}
+
 	}
 }

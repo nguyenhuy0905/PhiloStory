@@ -39,7 +39,7 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="7*"/>
-                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="300"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="20"/>
@@ -89,7 +89,7 @@
             </ContentControl>
 
             <!--Search bar-->
-            <TextBox Style="{StaticResource SearchBar}" Grid.Row="1" Grid.Column="1" Opacity="0.7" Margin="5"/>
+            <TextBox Style="{StaticResource SearchBar}" Grid.Row="1" Grid.Column="1" Opacity="0.7" Margin="5,5,10,5"/>
         </Grid>
     </Border>
     

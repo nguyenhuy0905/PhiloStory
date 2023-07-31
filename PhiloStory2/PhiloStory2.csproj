@@ -14,6 +14,9 @@
     <None Remove="Assets\Fonts\Philosopher-BoldItalic.otf" />
     <None Remove="Assets\Fonts\Philosopher-Italic.otf" />
     <None Remove="Assets\Fonts\Philosopher-Regular.otf" />
+    <None Remove="Assets\Images\fbicon.png" />
+    <None Remove="Assets\Images\igicon.png" />
+    <None Remove="Assets\Images\yticon.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +40,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Fonts\Philosopher-Regular.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\fbicon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\igicon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\yticon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

@@ -6,9 +6,17 @@
              xmlns:local="clr-namespace:PhiloStory2.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <ScrollViewer VerticalScrollBarVisibility="Hidden"> 
-        <StackPanel >
-            <TextBlock Text="Settings" FontSize="30" Foreground="White"/>
-        </StackPanel>
+    <ScrollViewer VerticalScrollBarVisibility="Hidden">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1200"/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+            <StackPanel>
+                <TextBlock Text="Settings" FontSize="30" Foreground="White"/>
+            </StackPanel>
+            <ContentControl Grid.Row="1" Content="{Binding FooterView}"/>
+        </Grid>
+        
     </ScrollViewer>
 </UserControl>

@@ -9,6 +9,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/SearchBarTheme.xaml"/>
+                <ResourceDictionary Source="Theme/PhilosopherFont.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
                 <view:HomeView/>
@@ -24,6 +25,10 @@
 
             <DataTemplate DataType="{x:Type viewModel:SettingViewModel}">
                 <view:SettingView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:FooterViewModel}">
+                <view:FooterView/>
             </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>

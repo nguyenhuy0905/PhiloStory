@@ -7,8 +7,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <ScrollViewer VerticalScrollBarVisibility="Hidden">
-        <StackPanel>
-            <TextBlock Text="Activity" Foreground="White" FontSize="30"/>
-        </StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1200"/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+            <StackPanel>
+                <TextBlock Text="Activity" Foreground="White" FontSize="30"/>
+            </StackPanel>
+            <ContentControl Grid.Row="1" Content="{Binding FooterView}"/>
+        </Grid>
+        
     </ScrollViewer>
 </UserControl>

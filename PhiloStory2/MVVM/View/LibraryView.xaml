@@ -25,11 +25,13 @@
                    FontSize="24"
                        FontFamily="{StaticResource Philosopher}"><Bold>Your Topics</Bold>
             </TextBlock>
-            <TextBox Grid.Row="2" Style="{StaticResource SearchBar}" Width="300" Margin="5,5,10,5" HorizontalAlignment="Right"/>
+            <StackPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0">
+                <TextBox Width="280" Style="{StaticResource SearchBar}" Opacity="0.7"/>
+            </StackPanel>
             <TextBlock Grid.Row="2"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Left"
-                   Width="980"
+                   Width="auto"
                    Height="40"
                    Margin="20,10,0,0"
                    FontSize="24"

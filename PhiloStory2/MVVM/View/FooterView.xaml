@@ -47,19 +47,19 @@
 
         <StackPanel Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Left" Margin="10,20,0,20">
             <TextBlock FontFamily="{StaticResource Philosopher}" FontSize="20">
-                <Hyperlink Name="hyperAboutUs" NavigateUri="https://www.google.com">
+                <Hyperlink Name="hyperAboutUs" NavigateUri="https://www.google.com" RequestNavigate="hyperAboutUs_RequestNavigate">
                     Về chúng tôi
                 </Hyperlink>
                 <LineBreak/> <LineBreak/>
-                <Hyperlink Name="hyperContact" NavigateUri="https://www.google.com">
+                <Hyperlink Name="hyperContact" NavigateUri="https://www.google.com" RequestNavigate="hyperContact_RequestNavigate">
                     Liên hệ
                 </Hyperlink>
                 <LineBreak/> <LineBreak/>
-                <Hyperlink Name="hyperCourse" NavigateUri="https://www.google.com">
+                <Hyperlink Name="hyperCourse" NavigateUri="https://www.google.com" RequestNavigate="hyperCourse_RequestNavigate">
                     Khóa học
                 </Hyperlink>
                 <LineBreak/> <LineBreak/>
-                <Hyperlink Name="hyperFAQ" NavigateUri="https://www.google.com">
+                <Hyperlink Name="hyperFAQ" NavigateUri="https://www.google.com" RequestNavigate="hyperFAQ_RequestNavigate">
                     FAQ
                 </Hyperlink>
             </TextBlock>

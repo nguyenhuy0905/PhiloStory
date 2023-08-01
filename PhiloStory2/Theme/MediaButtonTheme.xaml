@@ -7,14 +7,14 @@
                 <Trigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" To="#dddbdb"/>
+                            <ColorAnimation Duration="0:0:0.25" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" To="#dddbdb"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.EnterActions>
                 <Trigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" To="Transparent"/>
+                            <ColorAnimation Duration="0:0:0.25" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" To="Transparent"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.ExitActions>
@@ -27,7 +27,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Name="border"              
+                    <Border Name="border" CornerRadius="3"              
                         Background="{TemplateBinding Background}">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Border>

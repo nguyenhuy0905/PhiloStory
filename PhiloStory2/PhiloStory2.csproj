@@ -18,6 +18,7 @@
     <None Remove="Assets\Images\igicon.png" />
     <None Remove="Assets\Images\mainicon.png" />
     <None Remove="Assets\Images\yticon.png" />
+    <None Remove="Assets\Sounds\mousehover.wav" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,6 +55,9 @@
     </Resource>
     <Resource Include="Assets\Images\yticon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Sounds\mousehover.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
 

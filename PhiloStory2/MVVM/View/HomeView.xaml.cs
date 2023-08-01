@@ -1,4 +1,11 @@
-﻿using System.Threading;
+﻿using PhiloStory2.Core;
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Media;
+using System.Net.WebSockets;
+using System.Runtime.CompilerServices;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -10,8 +17,13 @@ namespace PhiloStory2.MVVM.View
 	/// <summary>
 	/// Interaction logic for HomeView.xaml
 	/// </summary>
+
+
 	public partial class HomeView : UserControl
 	{
+		protected MediaPlayer Player = new MediaPlayer();
+		string basedir = System.AppDomain.CurrentDomain.BaseDirectory;
+
 		public HomeView()
 		{
 			InitializeComponent();
@@ -24,7 +36,7 @@ namespace PhiloStory2.MVVM.View
 				e.Handled = true;
 				var eventArg = new MouseWheelEventArgs(e.MouseDevice, e.Timestamp, e.Delta);
 
-				eventArg.RoutedEvent = UIElement.MouseWheelEvent;
+				eventArg.RoutedEvent = MouseWheelEvent;
 
 				eventArg.Source = sender;
 
@@ -33,5 +45,16 @@ namespace PhiloStory2.MVVM.View
 				parent.RaiseEvent(eventArg);
 			}
 		}
+
+		private void ContentControl_MouseEnter(object sender, MouseEventArgs e)
+		{
+
+			basedir = basedir.Replace(@"bin\Debug\net7.0-windows", "");
+			var path = System.IO.Path.GetFullPath($"{basedir}/Assets/Sounds/mousehover.wav");
+			
+			Player.Open(new Uri(path, UriKind.RelativeOrAbsolute));
+			Player.Play();			
+		}
+		
 	}
 }

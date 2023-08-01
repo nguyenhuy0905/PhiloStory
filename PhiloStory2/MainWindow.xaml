@@ -27,7 +27,7 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="20"/>
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
@@ -85,7 +85,12 @@
             </ContentControl>
 
             <!--Search bar-->
-            <TextBox Style="{StaticResource SearchBar}" Grid.Row="1" Grid.Column="1" Opacity="0.7" Margin="5,5,10,5"/>
+            <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+                <TextBox Width="280" Style="{StaticResource SearchBar}" Opacity="0.7"/>
+            </StackPanel>
+            
+            
+            
         </Grid>
     </Border>
     

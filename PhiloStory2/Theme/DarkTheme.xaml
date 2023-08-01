@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <SolidColorBrush Color="#404258" x:Key="MainScreen"/>
+    <SolidColorBrush Color="#393a4c" x:Key="ChromeBar"/>
+    <SolidColorBrush Color="#f2f2f2" x:Key="Text"/>
+    <SolidColorBrush Color="#474E68" x:Key="Panel"/>
+    <SolidColorBrush Color="#474E68" x:Key="QuotePanel"/>
+
+
+</ResourceDictionary>

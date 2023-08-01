@@ -1,10 +1,14 @@
 ﻿using PhiloStory2.Core;
+using System;
+using System.Windows;
 
 namespace PhiloStory2.MVVM.ViewModel
 {
 	internal class SettingViewModel : ObservableObject
 	{
 		public FooterViewModel FooterVM { get; set; }
+
+		
 
 		private object footerView;
 
@@ -16,11 +20,13 @@ namespace PhiloStory2.MVVM.ViewModel
 			}
 		}
 
-
 		public SettingViewModel() {
 		    FooterVM = new FooterViewModel();
 			FooterView = FooterVM;
+		
 		}
+
+	
 
 	}
 }

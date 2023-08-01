@@ -50,6 +50,7 @@
     </UserControl.Resources>
     
     <Border>
+
         <ScrollViewer VerticalScrollBarVisibility="Hidden">
             <ScrollViewer.Resources>
                 <Style TargetType="Border">
@@ -61,10 +62,11 @@
                     <RowDefinition Height="1200"/>
                     <RowDefinition Height="200"/>
                 </Grid.RowDefinitions>
+               
                 <StackPanel>
                     <Grid Height="300">
-                        <Border Style="{StaticResource TitleAnimation}" Width="500" Height="200" BorderThickness="3" CornerRadius="10"
-                            BorderBrush="#ffd381" VerticalAlignment="Center" HorizontalAlignment="Center"
+                        <Border Style="{StaticResource TitleAnimation}" Width="500" Height="200" CornerRadius="10"
+                             VerticalAlignment="Center" HorizontalAlignment="Center"
                             Background="#f5deb3">
                             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                                    FontSize="45" Foreground="Black" FontWeight="Bold"

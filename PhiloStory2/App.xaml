@@ -8,6 +8,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/DarkTheme.xaml"/> <!--MergedDictionary[0]-->
+                
                 <ResourceDictionary Source="Theme/SearchBarTheme.xaml"/>
                 <ResourceDictionary Source="Theme/PhilosopherFont.xaml"/>
                 <ResourceDictionary Source="Theme/LibControlTheme.xaml"/>

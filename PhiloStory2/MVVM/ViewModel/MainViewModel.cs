@@ -28,7 +28,7 @@ namespace PhiloStory2.MVVM.ViewModel
         {
             HomeVM = new HomeViewModel();
 			LibraryVM = new LibraryViewModel();
-			CurrentView = HomeVM;
+			CurrentView = HomeVM;			
 			ActivityVM = new ActivityViewModel();
 			SettingVM = new SettingViewModel();
 

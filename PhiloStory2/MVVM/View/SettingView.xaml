@@ -6,17 +6,40 @@
              xmlns:local="clr-namespace:PhiloStory2.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/Theme/SettingControlTheme.xaml"/>
+    </UserControl.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Hidden">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="1200"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="600"/>
                 <RowDefinition Height="200"/>
             </Grid.RowDefinitions>
-            <StackPanel>
-                <TextBlock Text="Settings" FontSize="30" Foreground="White"/>
-            </StackPanel>
-            <ContentControl Grid.Row="1" Content="{Binding FooterView}"/>
+            <Label Content="Cài Đặt" FontFamily="{StaticResource Philosopher}" FontSize="30" FontWeight="Bold"/>
+            <ContentControl Grid.Row="2" Content="{Binding FooterView}"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="20,30,0,0">
+                    <Ellipse x:Name="avaHolder" Fill="LightGray" Width="200" Height="125"/>
+                    <Button x:Name="btnChangeAva" Margin="0,10,0,0" Content="Thay đổi hình ảnh" Style="{StaticResource TransparentSettingButton}"/>
+                    <Label x:Name="lblUsername" Content="Tên người dùng" FontSize="25" FontFamily="{StaticResource Philosopher}"/>
+                    <Button x:Name="btnChangeUsername" Margin="0,10,0,0" Content="Đổi tên" Style="{StaticResource TransparentSettingButton}"/>
+                    <Button x:Name="btnSaveInfo" Style="{StaticResource SettingButton}" Content="Lưu"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="10,50,0,0" Grid.Column="1">
+                    <Button x:Name="btnPref" HorizontalAlignment="Left" Content="Chỉnh sửa sở thích của bạn" Width="500" Style="{StaticResource SettingButton}"/>
+                    <Rectangle Height="1"  Margin="5,15,5,5" Fill="Gray"/>
+                    <Button Style="{StaticResource SettingButton}" Width="500" Content="Cài đặt chung"/>
+                    <Button Style="{StaticResource SettingButton}" Width="500" Content="FAQ"/>
+                    <Button Style="{StaticResource SettingButton}" Width="500" Content="Về chúng tôi"/>
+
+                </StackPanel>               
+            </Grid> 
         </Grid>
-        
     </ScrollViewer>
 </UserControl>

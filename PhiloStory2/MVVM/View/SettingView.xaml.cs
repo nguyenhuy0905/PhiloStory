@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows.Controls;
 
 namespace PhiloStory2.MVVM.View
 {
@@ -7,9 +8,11 @@ namespace PhiloStory2.MVVM.View
 	/// </summary>
 	public partial class SettingView : UserControl
 	{
+
 		public SettingView()
 		{
-			InitializeComponent();
+			InitializeComponent();			
 		}
-	}
+
+    }
 }

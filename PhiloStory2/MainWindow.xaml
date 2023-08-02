@@ -59,22 +59,22 @@
                 </Button>
                 <Border Style="{StaticResource NavButtonAnimation}">
                     <Button x:Name="btnHome" Style="{StaticResource NavButton}" Content="Home" 
-                    Command="{Binding NavHomeCommand}"/>
+                    Command="{Binding NavHomeCommand}" MouseEnter="NavButton_MouseEnter"/>
                 </Border>
                 <Rectangle Width="1" Margin="0,5,0,5" Fill="LightGray"/>
                 <Border Style="{StaticResource NavButtonAnimation}">
                     <Button x:Name="btnLib" Style="{StaticResource NavButton}" Content="Library" 
-                    Command="{Binding NavLibraryCommand}"/>
+                    Command="{Binding NavLibraryCommand}" MouseEnter="NavButton_MouseEnter"/>
                 </Border>
                 <Rectangle Width="1" Margin="0,5,0,5" Fill="LightGray"/>
                 <Border Style="{StaticResource NavButtonAnimation}">
                     <Button x:Name="btnAct" Style="{StaticResource NavButton}" Content="Activity"
-                    Command="{Binding NavActivityCommand}"/>
+                    Command="{Binding NavActivityCommand}" MouseEnter="NavButton_MouseEnter"/>
                 </Border>
                 <Rectangle Width="1" Margin="0,5,0,5" Fill="LightGray"/>
                 <Border Style="{StaticResource NavButtonAnimation}">
                     <Button x:Name="btnSetting" Style="{StaticResource NavButton}" Content="Settings"
-                    Command="{Binding NavSettingCommand}"/>
+                    Command="{Binding NavSettingCommand}" MouseEnter="NavButton_MouseEnter"/>
                 </Border>
             </StackPanel>
             <Border Grid.Row="2" Grid.ColumnSpan="2" BorderThickness="5,0,5,5" BorderBrush="#96C4C3" CornerRadius="0,0,5,5">

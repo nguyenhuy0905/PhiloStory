@@ -52,11 +52,6 @@
     <Border>
 
         <ScrollViewer VerticalScrollBarVisibility="Hidden">
-            <ScrollViewer.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="10"/>
-                </Style>
-            </ScrollViewer.Resources>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1200"/>
@@ -85,9 +80,26 @@
                                    Text="Tìm hiểu về những tư tưởng lớn của triết học qua những câu chuyện nhỏ..." FontFamily="{StaticResource Philosopher}"/>
                             <ScrollViewer PreviewMouseWheel="ScrollViewer_PreviewMouseWheel" Name="svHorizontal" Grid.Row="1" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible" Margin="0">
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-                                    <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"/>
-                                    <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"/>
-                                    <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"/>
+                                    <!--Lưu ý trước khi chèn ảnh
+                                    Sau khi thêm ảnh vào file Assets/Images, để ảnh dưới định dạng PNG
+                                    Click vào ảnh, để hiện thanh Properties ở góc dưới bên phải, chỉnh:
+                                    Build Action: Resource
+                                    Copy To Output Directory: hoặc Copy if Newer hoặc Copy Always-->
+                                    
+                                    <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter">
+                                        <ContentControl.Content>
+                                            <Image Source="/Assets/Images/socrates.png" Stretch="UniformToFill"/>
+                                        </ContentControl.Content>
+                                    </ContentControl>
+                                    <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter">
+                                        <ContentControl.Content>
+                                            <Image Stretch="UniformToFill"/>
+                                            
+                                        </ContentControl.Content>
+                                    </ContentControl>
+                                    <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter">
+                                        
+                                    </ContentControl>
                                     <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"/>
                                     <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"/>
                                     <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"/>
@@ -95,6 +107,7 @@
                                     <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"/>
                                 </StackPanel>
                             </ScrollViewer>
+                            
                         </Grid>
                     </Grid>
 
@@ -104,7 +117,9 @@
                             <ColumnDefinition Width="6*"/>
                         </Grid.ColumnDefinitions>
                         <Border Margin="45" Background="#f2f2f2"
-                            BorderBrush="Gray" BorderThickness="2"></Border>
+                            BorderBrush="Gray" BorderThickness="2">
+                            <Image Source="/Assets/Images/bookshelf.png" Stretch="Uniform"/>
+                        </Border>
                         <TextBlock Grid.Column="1" TextWrapping="Wrap" Margin="5" FontFamily="{StaticResource Philosopher}">
                         <Run FontSize="35" FontWeight="Bold" FontStyle="Italic">
                             Tìm hiểu về Triết học một cách dễ dàng, cụ thể

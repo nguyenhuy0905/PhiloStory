@@ -14,10 +14,6 @@ namespace PhiloStory2.MVVM.View
 
 	public partial class HomeView : UserControl
 	{
-		protected static MediaPlayer Player = new();		
-		static string basedir = System.AppDomain.CurrentDomain.BaseDirectory;
-
-
 		public HomeView()
 		{
 			InitializeComponent();
@@ -43,11 +39,7 @@ namespace PhiloStory2.MVVM.View
 
 		private void ContentControl_MouseEnter(object sender, MouseEventArgs e)
 		{
-			basedir = basedir.Replace(@"bin\Debug\net7.0-windows", "");
-			var path = System.IO.Path.GetFullPath($"{basedir}/Assets/Sounds/mousehover.wav");
-
-			Player.Open(new Uri(path, UriKind.RelativeOrAbsolute));
-			Player.Play();
+			SoundEffect.PlayMouseHover();
 		}
 		
 	}

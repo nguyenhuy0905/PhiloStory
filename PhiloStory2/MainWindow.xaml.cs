@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhiloStory2.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,6 +50,11 @@ namespace PhiloStory2
 		{
 			Application.Current.Shutdown();
 		}
+
+		private void NavButton_MouseEnter(object sender, MouseEventArgs e)
+		{
+			SoundEffect.PlayMouseHover();
+        }
 		
 	}
 }

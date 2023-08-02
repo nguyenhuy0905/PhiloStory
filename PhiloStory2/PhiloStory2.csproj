@@ -14,9 +14,11 @@
     <None Remove="Assets\Fonts\Philosopher-BoldItalic.otf" />
     <None Remove="Assets\Fonts\Philosopher-Italic.otf" />
     <None Remove="Assets\Fonts\Philosopher-Regular.otf" />
+    <None Remove="Assets\Images\bookshelf.png" />
     <None Remove="Assets\Images\fbicon.png" />
     <None Remove="Assets\Images\igicon.png" />
     <None Remove="Assets\Images\mainicon.png" />
+    <None Remove="Assets\Images\socrates.png" />
     <None Remove="Assets\Images\yticon.png" />
     <None Remove="Assets\Sounds\mousehover.wav" />
   </ItemGroup>
@@ -44,6 +46,9 @@
     <Resource Include="Assets\Fonts\Philosopher-Regular.otf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\Images\bookshelf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\Images\fbicon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -51,6 +56,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Images\mainicon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\socrates.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Images\yticon.png">

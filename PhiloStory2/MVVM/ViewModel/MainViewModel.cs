@@ -24,7 +24,17 @@ namespace PhiloStory2.MVVM.ViewModel
 				OnPropertyChanged();
 			}
 		}
-        public MainViewModel()
+
+		private object _prevView;
+
+		public object PreviousView
+		{
+			get { return _prevView; }
+			set { _prevView = value; }
+		}
+
+
+		public MainViewModel()
         {
             HomeVM = new HomeViewModel();
 			LibraryVM = new LibraryViewModel();
@@ -34,18 +44,22 @@ namespace PhiloStory2.MVVM.ViewModel
 
 			NavHomeCommand = new(o =>
 			{
+				PreviousView = CurrentView;
 				CurrentView = HomeVM;				
 			});
 			NavLibraryCommand = new(o =>
 			{
+				PreviousView = CurrentView;
 				CurrentView = LibraryVM;
 			});
 			NavActivityCommand = new(o =>
 			{
+				PreviousView = CurrentView;
 				CurrentView = ActivityVM;
 			});
 			NavSettingCommand = new(o =>
 			{
+				PreviousView = CurrentView;
 				CurrentView = SettingVM;
 			});
         }

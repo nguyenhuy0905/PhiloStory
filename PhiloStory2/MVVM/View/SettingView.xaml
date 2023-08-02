@@ -29,14 +29,14 @@
                     <Button x:Name="btnChangeAva" Margin="0,10,0,0" Content="Thay đổi hình ảnh" Style="{StaticResource TransparentSettingButton}"/>
                     <Label x:Name="lblUsername" Content="Tên người dùng" FontSize="25" FontFamily="{StaticResource Philosopher}"/>
                     <Button x:Name="btnChangeUsername" Margin="0,10,0,0" Content="Đổi tên" Style="{StaticResource TransparentSettingButton}"/>
-                    <Button x:Name="btnSaveInfo" Style="{StaticResource SettingButton}" Content="Lưu"/>
+                    <Button x:Name="btnSaveInfo" Content="Lưu" FontFamily="{StaticResource Philosopher}" FontSize="25" Background="Transparent" BorderThickness="0"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="10,50,0,0" Grid.Column="1">
-                    <Button x:Name="btnPref" HorizontalAlignment="Left" Content="Chỉnh sửa sở thích của bạn" Width="500" Style="{StaticResource SettingButton}"/>
-                    <Rectangle Height="1"  Margin="5,15,5,5" Fill="Gray"/>
-                    <Button Style="{StaticResource SettingButton}" Width="500" Content="Cài đặt chung"/>
-                    <Button Style="{StaticResource SettingButton}" Width="500" Content="FAQ"/>
-                    <Button Style="{StaticResource SettingButton}" Width="500" Content="Về chúng tôi"/>
+                    <Button x:Name="btnPref" Content="Chỉnh sửa sở thích của bạn" Style="{StaticResource SettingButton}" MouseEnter="SettingButton_MouseEnter"/>
+                    <Rectangle Height="1" Width="400"  Margin="5,15,5,5" Fill="Gray"/>
+                    <Button Style="{StaticResource SettingButton}"  Content="Cài đặt chung" MouseEnter="SettingButton_MouseEnter"/>
+                    <Button Style="{StaticResource SettingButton}"  Content="FAQ" MouseEnter="SettingButton_MouseEnter"/>
+                    <Button Style="{StaticResource SettingButton}"  Content="Về chúng tôi" MouseEnter="SettingButton_MouseEnter"/>
 
                 </StackPanel>               
             </Grid> 

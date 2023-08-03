@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PhiloStory2.MVVM.View.SettingView"
+<UserControl x:Class="PhiloStory2.MVVM.View.SettingView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,6 @@
              xmlns:local="clr-namespace:PhiloStory2.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-
     <UserControl.Resources>
         <ResourceDictionary Source="/Theme/SettingControlTheme.xaml"/>
     </UserControl.Resources>
@@ -32,14 +31,71 @@
                     <Button x:Name="btnSaveInfo" Content="Lưu" FontFamily="{StaticResource Philosopher}" FontSize="25" Background="Transparent" BorderThickness="0"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="10,50,0,0" Grid.Column="1">
-                    <Button x:Name="btnPref" Content="Chỉnh sửa sở thích của bạn" Style="{StaticResource SettingButton}" MouseEnter="SettingButton_MouseEnter"/>
+                    <Border Height="45"
+                            Width="370"
+                            Opacity="0.5"
+                            BorderThickness="3"
+                            CornerRadius="10"
+                            Background="#759EB8"
+                            Margin="0,10,0,0">
+                        <Menu Height="35"
+                              Width="360"
+                              Background="Transparent">
+                            <MenuItem Header="Chỉnh sửa sở thích của bạn" Height="35" Width="360" Style="{StaticResource Main_MenuItem}"></MenuItem>
+                        </Menu>
+                    </Border>
                     <Rectangle Height="1" Width="400"  Margin="5,15,5,5" Fill="Gray"/>
-                    <Button Style="{StaticResource SettingButton}"  Content="Cài đặt chung" MouseEnter="SettingButton_MouseEnter"/>
-                    <Button Style="{StaticResource SettingButton}"  Content="FAQ" MouseEnter="SettingButton_MouseEnter"/>
-                    <Button Style="{StaticResource SettingButton}"  Content="Về chúng tôi" MouseEnter="SettingButton_MouseEnter"/>
-
-                </StackPanel>               
-            </Grid> 
+                    <Border Height="45"
+                            Width="370"
+                            Opacity="0.5"
+                            BorderThickness="3"
+                            CornerRadius="10"
+                            Background="#759EB8"
+                            Margin="0,10,0,5"
+                            HorizontalAlignment="Center">
+                        <Menu Height="35"
+                              Width="360"
+                              Background="Transparent">
+                            <MenuItem Header="Cài đặt chung" Height="35" Width="360" Style="{StaticResource Main_MenuItem}">
+                                <MenuItem Style="{StaticResource Screen_Mode}"
+                                          Height="35"
+                                          Width="360"
+                                          Header="Chế độ màn hình">
+                                    <RadioButton Content="CHẾ ĐỘ SÁNG" Checked="LightMode"></RadioButton>
+                                    <RadioButton Content="CHẾ ĐỘ CƠ BẢN" Checked="NeutralMode" IsChecked="True"></RadioButton>
+                                    <RadioButton Content="CHẾ ĐỘ BAN ĐÊM" Checked="DarkMode"></RadioButton>
+                                </MenuItem>
+                            </MenuItem>
+                        </Menu>
+                    </Border>
+                    <Border Height="45"
+                            Width="370"
+                            Opacity="0.5"
+                            BorderThickness="3"
+                            CornerRadius="10"
+                            Background="#759EB8"
+                            Margin="0,5,0,5">
+                        <Menu Height="35"
+                              Width="360"
+                              Background="Transparent">
+                            <MenuItem Header="FAQ" Height="35" Width="360" Style="{StaticResource Main_MenuItem}"></MenuItem>
+                        </Menu>
+                    </Border>
+                    <Border Height="45"
+                            Width="370"
+                            Opacity="0.5"
+                            BorderThickness="3"
+                            CornerRadius="10"
+                            Background="#759eb8"
+                            Margin="0,5,0,0">
+                        <Menu Height="35"
+                              Width="360"
+                              Background="Transparent">
+                            <MenuItem Header="Về chúng tôi" Height="35" Width="360" Style="{StaticResource Main_MenuItem}"></MenuItem>
+                        </Menu>
+                    </Border>
+                </StackPanel>
+            </Grid>
         </Grid>
     </ScrollViewer>
 </UserControl>

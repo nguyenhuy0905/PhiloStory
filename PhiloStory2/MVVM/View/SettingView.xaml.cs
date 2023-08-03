@@ -1,4 +1,4 @@
-﻿using PhiloStory2.Core;
+using PhiloStory2.Core;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,6 +19,21 @@ namespace PhiloStory2.MVVM.View
 		private void SettingButton_MouseEnter(object sender, RoutedEventArgs e)
 		{
 			SoundEffect.PlayMouseHover();
+        }
+
+        private void LightMode(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NeutralMode(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DarkMode(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

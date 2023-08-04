@@ -57,6 +57,8 @@
 #*.DOCX  diff=astextplain
 #*.dot   diff=astextplain
 #*.DOT   diff=astextplain
+#* linguist-vendored
+#*.cs linguist-vendored=false
 #*.pdf   diff=astextplain
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain

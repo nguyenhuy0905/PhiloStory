@@ -36,7 +36,7 @@
                             Opacity="0.5"
                             BorderThickness="3"
                             CornerRadius="10"
-                            Background="#759EB8"
+                            Background="{StaticResource Panel}"
                             Margin="0,10,0,0">
                         <Menu Height="35"
                               Width="360"
@@ -50,7 +50,7 @@
                             Opacity="0.5"
                             BorderThickness="3"
                             CornerRadius="10"
-                            Background="#759EB8"
+                            Background="{StaticResource Panel}"
                             Margin="0,10,0,5"
                             HorizontalAlignment="Center">
                         <Menu Height="35"
@@ -61,7 +61,6 @@
                                           Height="35"
                                           Width="360"
                                           Header="Chế độ màn hình">
-                                    <RadioButton Content="CHẾ ĐỘ SÁNG" Checked="LightMode"></RadioButton>
                                     <RadioButton Content="CHẾ ĐỘ CƠ BẢN" Checked="NeutralMode" IsChecked="True"></RadioButton>
                                     <RadioButton Content="CHẾ ĐỘ BAN ĐÊM" Checked="DarkMode"></RadioButton>
                                 </MenuItem>
@@ -73,12 +72,18 @@
                             Opacity="0.5"
                             BorderThickness="3"
                             CornerRadius="10"
-                            Background="#759EB8"
+                            Background="{StaticResource Panel}"
                             Margin="0,5,0,5">
                         <Menu Height="35"
                               Width="360"
                               Background="Transparent">
-                            <MenuItem Header="FAQ" Height="35" Width="360" Style="{StaticResource Main_MenuItem}"></MenuItem>
+                            <MenuItem Header="FAQ" Height="35" Width="360" Style="{StaticResource Main_MenuItem}"  FontFamily="{StaticResource Philosopher}" FontSize="20">
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left"  Height="35" Width="280">
+                                    <Hyperlink Name="hyperFAQ" NavigateUri="https://www.google.com" RequestNavigate="hyperFAQ_RequestNavigate">
+                                        FAQ
+                                    </Hyperlink>    
+                                </TextBlock>                                
+                            </MenuItem>
                         </Menu>
                     </Border>
                     <Border Height="45"
@@ -86,12 +91,28 @@
                             Opacity="0.5"
                             BorderThickness="3"
                             CornerRadius="10"
-                            Background="#759eb8"
+                            Background="{StaticResource Panel}"
                             Margin="0,5,0,0">
                         <Menu Height="35"
                               Width="360"
                               Background="Transparent">
-                            <MenuItem Header="Về chúng tôi" Height="35" Width="360" Style="{StaticResource Main_MenuItem}"></MenuItem>
+                            <MenuItem Header="Về chúng tôi" Height="35" Width="360" Style="{StaticResource Main_MenuItem}" FontFamily="{StaticResource Philosopher}" FontSize="20">
+                                <TextBlock Height="35" Width="280" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                                    <Hyperlink Name="hyperAboutUs" NavigateUri="https://www.google.com" RequestNavigate="hyperAboutUs_RequestNavigate">
+                                        Về chúng tôi
+                                    </Hyperlink>
+                                </TextBlock>
+                                <TextBlock Height="35" Width="280" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                                    <Hyperlink Name="hyperContact" NavigateUri="https://www.google.com" RequestNavigate="hyperContact_RequestNavigate">
+                                        Liên hệ
+                                    </Hyperlink>
+                                </TextBlock>
+                                <TextBlock Height="35" Width="280" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                                    <Hyperlink Name="hyperCourse" NavigateUri="https://www.google.com" RequestNavigate="hyperCourse_RequestNavigate">
+                                        Khóa học
+                                    </Hyperlink>
+                                </TextBlock>
+                            </MenuItem>
                         </Menu>
                     </Border>
                 </StackPanel>

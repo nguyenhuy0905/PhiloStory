@@ -63,4 +63,5 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
-#*.h linguist-language=C#
+#* linguist-vendored
+#*.cs linguist-vendored=false

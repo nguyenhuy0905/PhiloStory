@@ -1,4 +1,4 @@
-﻿<Application x:Class="PhiloStory2.App"
+<Application x:Class="PhiloStory2.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:viewModel="clr-namespace:PhiloStory2.MVVM.ViewModel"
@@ -8,8 +8,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Theme/DarkTheme.xaml"/> <!--MergedDictionary[0]-->
-                
+                <ResourceDictionary Source="Theme/NeutralTheme.xaml"/> <!--MergedDictionary[0]-->
                 <ResourceDictionary Source="Theme/SearchBarTheme.xaml"/>
                 <ResourceDictionary Source="Theme/PhilosopherFont.xaml"/>
                 <ResourceDictionary Source="Theme/LibControlTheme.xaml"/>

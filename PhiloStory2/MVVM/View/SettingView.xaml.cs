@@ -19,21 +19,25 @@ namespace PhiloStory2.MVVM.View
 		private void SettingButton_MouseEnter(object sender, RoutedEventArgs e)
 		{
 			SoundEffect.PlayMouseHover();
+        	}
+
+	        private void SettingButton_MouseEnter(object sender, RoutedEventArgs e)
+			{
+				SoundEffect.PlayMouseHover();
+	        }
+	
+	        private void LightMode(object sender, RoutedEventArgs e)
+	        {
+				SwitchTheme.ChangeTheme(new Uri("Theme/Light.xaml", UriKind.Relative));
+	        }
+	
+	        private void NeutralMode(object sender, RoutedEventArgs e)
+	        {
+	            SwitchTheme.ChangeTheme(new Uri("Theme/NeutralTheme.xaml", UriKind.Relative));
+	        }
+	
+	        private void DarkMode(object sender, RoutedEventArgs e)
+	        {
+	            SwitchTheme.ChangeTheme(new Uri("Theme/DarkTheme.xaml", UriKind.Relative));
         }
-
-        private void LightMode(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void NeutralMode(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void DarkMode(object sender, RoutedEventArgs e)
-        {
-
-        }
-    }
 }

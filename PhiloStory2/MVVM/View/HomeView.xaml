@@ -76,7 +76,7 @@
                                 <RowDefinition Height="1*"/>
                                 <RowDefinition Height="9*"/>
                             </Grid.RowDefinitions>
-                            <TextBlock FontSize="25" FontWeight="ExtraBold"
+                            <TextBlock FontSize="25" Foreground="{DynamicResource Text}" FontWeight="ExtraBold"
                                    Text="Tìm hiểu về những tư tưởng lớn của triết học qua những câu chuyện nhỏ..." FontFamily="{StaticResource Philosopher}"/>
                             <ScrollViewer PreviewMouseWheel="ScrollViewer_PreviewMouseWheel" Name="svHorizontal" Grid.Row="1" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible" Margin="0">
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">

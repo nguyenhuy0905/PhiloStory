@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/PhiloStory2/MVVM/View/LibraryView.xaml
+/PhiloStory2/MVVM/View/LibraryView.xaml.cs

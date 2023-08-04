@@ -1,4 +1,5 @@
 ﻿using PhiloStory2.Core;
+using PhiloStory2.MVVM.ViewModel;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -41,6 +42,14 @@ namespace PhiloStory2.MVVM.View
 		{
 			SoundEffect.PlayMouseHover();
 		}
-		
-	}
+
+		private void ContentControl_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+		{
+			if(sender is ContentControl cc)
+			{
+				ArticleReaderViewModel ArticleReaderVM = new((string)cc.Tag);		
+			}
+
+        }
+    }
 }

@@ -32,7 +32,7 @@
             </Grid.RowDefinitions>
 
             <!--ChromeBar-->
-            <Border Grid.ColumnSpan="2" CornerRadius="10,10,0,0" Background="{StaticResource ChromeBar}">
+            <Border Grid.ColumnSpan="2" CornerRadius="10,10,0,0" Background="{DynamicResource ChromeBar}">
                 <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Background="Transparent">
                     <Button WindowChrome.IsHitTestVisibleInChrome="True" Name="btnMinimize" Style="{StaticResource OpButton}" Content="🗕" Click="btnMinimize_Click"/>
                     <Button WindowChrome.IsHitTestVisibleInChrome="True" Name="btnMaximize" Style="{StaticResource OpButton}" Content="🗖" Click="btnMaximize_Click"/>

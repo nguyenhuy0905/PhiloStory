@@ -23,7 +23,6 @@
                                         <CircleEase/>
                                     </DoubleAnimation.EasingFunction>
                                 </DoubleAnimation>
-                                <ColorAnimation Duration="0:0:0.5" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" To="#ffd381"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </Trigger.EnterActions>
@@ -40,7 +39,6 @@
                                         <CircleEase/>
                                     </DoubleAnimation.EasingFunction>
                                 </DoubleAnimation>
-                                <ColorAnimation Duration="0:0:0.25" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" To="#f5deb3"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </Trigger.ExitActions>
@@ -86,12 +84,16 @@
                                     Build Action: Resource
                                     Copy To Output Directory: hoặc Copy if Newer hoặc Copy Always-->
                                     
-                                    <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter">
+                                    <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"
+                                                    PreviewMouseDown="ContentControl_PreviewMouseDown"
+                                                     Tag="MythOfSisyphus">
                                         <ContentControl.Content>
                                             <Image Source="/Assets/Images/socrates.png" Stretch="UniformToFill"/>
                                         </ContentControl.Content>
                                     </ContentControl>
-                                    <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter">
+                                    <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"
+                                                    PreviewMouseDown="ContentControl_PreviewMouseDown"
+                                                    Tag="MementoMori">
                                         <ContentControl.Content>
                                             <Image Stretch="UniformToFill"/>
                                             

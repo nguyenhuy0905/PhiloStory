@@ -6,6 +6,21 @@ namespace PhiloStory2.MVVM.ViewModel
 	{
 		public FooterViewModel FooterVM { get; set; }
 
+		public RelayCommand OpenTextEditorCommand => new(execute => OpenTextEditor());
+
+		public TextEditorViewModel TextEditorVM { get; set; }
+
+		private object _textEditor;
+
+		public object TextEditor
+		{
+			get { return _textEditor; }
+			set { _textEditor = value;
+				OnPropertyChanged();
+			}
+		}
+
+
 		private object footerView;
 
 		public object FooterView
@@ -16,11 +31,17 @@ namespace PhiloStory2.MVVM.ViewModel
 			}
 		}
 
-
 		public ActivityViewModel() 
 		{
 			FooterVM = new FooterViewModel();
 			FooterView = FooterVM;
 		}
+
+		private void OpenTextEditor()
+		{
+			TextEditorVM = new();
+			TextEditor = TextEditorVM;
+		}
+
 	}
 }

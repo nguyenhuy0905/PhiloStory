@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="PhiloStory2.MVVM.View.TextEditorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PhiloStory2.MVVM.View" xmlns:b="http://schemas.microsoft.com/xaml/behaviors" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="1000">
+    <UserControl.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="OpenFile_Executed"/>
+        <CommandBinding Command="ApplicationCommands.Save" Executed="SaveFile_Executed"/>
+    </UserControl.CommandBindings>
+    <UserControl.Resources>
+        
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DockPanel>
+            <ToolBar DockPanel.Dock="Top">
+                <Button x:Name="btnOpen" Command="ApplicationCommands.Open">
+                    <Image Source="/Assets/Images/folder.png" Height="50"/>
+                </Button>
+                <Button x:Name="btnSave" Command="ApplicationCommands.Save">
+                    <Image Source="/Assets/Images/disk.png" Height="50"/>
+                </Button>
+                <Rectangle Width="1" Fill="Gray" Margin="5,10,5,10"/>
+                <Button x:Name="btnBold" Width="50" Height="50" Command="EditingCommands.ToggleBold"
+                              FontFamily="Times New Roman" FontSize="40" FontWeight="Bold">
+                    B
+                </Button>
+                <Button x:Name="btnItalic" Width="50" Height="50" Command="EditingCommands.ToggleItalic"
+                              FontFamily="Times New Roman" FontStyle="Italic" FontSize="35" FontWeight="Light">
+                    I
+                </Button>
+                <Button x:Name="btnUnderline" Width="50" Height="50" Command="EditingCommands.ToggleUnderline"
+                              FontFamily="Times New Roman" FontSize="40" FontWeight="Normal">
+                    <TextBlock TextDecorations="Underline">U</TextBlock>
+                </Button>
+                <Button x:Name="btnAlignLeft" Height="50" Width="50" Command="EditingCommands.AlignLeft">
+                    <Image Margin="3" Source="/Assets/Images/left-align.png"/>
+                </Button>
+                <Button x:Name="btnAlignCenter" Height="50" Width="50" Command="EditingCommands.AlignCenter">
+                    <Image Margin="3" Source="/Assets/Images/center-align.png"/>
+                </Button>
+                <Button x:Name="btnAlignJustify" Height="50" Width="50" Command="EditingCommands.AlignJustify">
+                    <Image Margin="3" Source="/Assets/Images/justify-align.png"/>
+                </Button>
+                <Button x:Name="btnAlignRight" Height="50" Width="50" Command="EditingCommands.AlignRight">
+                    <Image Margin="3" Source="/Assets/Images/right-align.png"/>
+                </Button>
+                <ComboBox x:Name="cmbFonts" Height="50" Width="150"
+                          IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding TextFonts}" SelectionChanged="cmbFonts_SelectionChanged">
+                </ComboBox>
+                <ComboBox x:Name="cmbFontSize" Height="50" Width="50"
+                          IsSynchronizedWithCurrentItem="True" SelectionChanged="cmbFontSize_SelectionChanged">
+                </ComboBox>
+                <Button x:Name="btnImage" Height="50" Width="50" PreviewMouseDoubleClick="btnImage_PreviewMouseDoubleClick">
+                    <Image Source="/Assets/Images/gallery.png"/>
+                    
+                </Button>
+                <xctk:ColorPicker x:Name="btnColor" Height="50" Width="50" SelectedColor="Black" SelectedColorChanged="btnColor_SelectedColorChanged">
+                    
+                </xctk:ColorPicker>
+                <Rectangle Width="1" Fill="Gray" Margin="10"/>
+                <Button x:Name="btnUndo" Width="50" Height="50" Command="ApplicationCommands.Undo">
+                    <Image Source="/Assets/Images/undo-arrow.png"/>
+                </Button>
+                <Button x:Name="btnRedo" Width="50" Height="50" Command="ApplicationCommands.Redo">
+                    <Image Source="/Assets/Images/redo-arrow.png"/>
+                    
+                </Button>
+            </ToolBar>
+        </DockPanel>
+            
+            
+        <Grid Grid.Row="1">
+            <RichTextBox x:Name="rtbEditor" SelectionChanged="rtbEditor_SelectionChanged" FontSize="16" FontFamily="Calibri">
+                
+            </RichTextBox>
+        </Grid>
+    </Grid>
+</UserControl>

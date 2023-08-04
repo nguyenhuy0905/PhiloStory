@@ -7,6 +7,8 @@ namespace PhiloStory2.MVVM.View
 	/// </summary>
 	public partial class LibraryView : UserControl
 	{
+
+
 		public LibraryView()
 		{
 			InitializeComponent();

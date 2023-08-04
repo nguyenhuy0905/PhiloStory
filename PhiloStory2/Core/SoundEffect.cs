@@ -10,7 +10,7 @@ namespace PhiloStory2.Core
 {
 	public class SoundEffect
 	{
-		private static MediaPlayer _player = new();
+		private static readonly MediaPlayer _player = new();
 		static string basedir = System.AppDomain.CurrentDomain.BaseDirectory;
 		
 

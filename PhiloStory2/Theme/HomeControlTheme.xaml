@@ -13,24 +13,16 @@
                                         <DataTrigger.EnterActions>
                                             <BeginStoryboard>
                                                 <Storyboard>
-                                                    <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetProperty="Height" To="230">
-                                                        
-                                                    </DoubleAnimation>
-                                                    <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetProperty="Width" To="230">
-                                                        
-                                                    </DoubleAnimation>
+                                                    <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetProperty="Height" To="230"/>
+                                                    <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetProperty="Width" To="230"/>
                                                 </Storyboard>
                                             </BeginStoryboard>
                                         </DataTrigger.EnterActions>
                                         <DataTrigger.ExitActions>
                                             <BeginStoryboard>
                                                 <Storyboard>
-                                                    <DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="Height" To="200">
-                                                        
-                                                    </DoubleAnimation>
-                                                    <DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="Width" To="200">
-                                                        
-                                                    </DoubleAnimation>
+                                                    <DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="Height" To="200"/>
+                                                    <DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="Width" To="200"/>
                                                 </Storyboard>
                                             </BeginStoryboard>
                                         </DataTrigger.ExitActions>

@@ -15,16 +15,34 @@
     <None Remove="Assets\Fonts\Philosopher-Italic.otf" />
     <None Remove="Assets\Fonts\Philosopher-Regular.otf" />
     <None Remove="Assets\Images\bookshelf.png" />
+    <None Remove="Assets\Images\center-align.png" />
+    <None Remove="Assets\Images\disk.png" />
     <None Remove="Assets\Images\fbicon.png" />
+    <None Remove="Assets\Images\folder.png" />
+    <None Remove="Assets\Images\gallery.png" />
     <None Remove="Assets\Images\igicon.png" />
+    <None Remove="Assets\Images\justify-align.png" />
+    <None Remove="Assets\Images\left-align.png" />
     <None Remove="Assets\Images\mainicon.png" />
+    <None Remove="Assets\Images\paint-bucket.png" />
+    <None Remove="Assets\Images\redo-arrow.png" />
+    <None Remove="Assets\Images\right-align.png" />
     <None Remove="Assets\Images\socrates.png" />
+    <None Remove="Assets\Images\undo-arrow.png" />
     <None Remove="Assets\Images\yticon.png" />
     <None Remove="Assets\Sounds\mousehover.wav" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="MVVM\Model\" />
+    <Resource Include="Assets\Images\center-align.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.5.0" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1901.177" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,16 +67,43 @@
     <Resource Include="Assets\Images\bookshelf.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\Images\disk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\Images\fbicon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\folder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\gallery.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Images\igicon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\Images\justify-align.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\left-align.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\Images\mainicon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\Images\paint-bucket.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\redo-arrow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\right-align.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\Images\socrates.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\undo-arrow.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Images\yticon.png">
@@ -67,6 +112,10 @@
     <Resource Include="Assets\Sounds\mousehover.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\UserWrittenFiles\" />
   </ItemGroup>
 
 </Project>

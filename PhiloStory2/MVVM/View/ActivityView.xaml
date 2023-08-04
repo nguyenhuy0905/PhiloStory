@@ -4,16 +4,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PhiloStory2.MVVM.View"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"  
+             xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" xmlns:viewmodel="clr-namespace:PhiloStory2.MVVM.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:ActivityViewModel}"
              d:DesignHeight="450" d:DesignWidth="800">
     <ScrollViewer VerticalScrollBarVisibility="Hidden">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="1200"/>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="200"/>
             </Grid.RowDefinitions>
             <StackPanel>
-                <TextBlock Text="Activity" Foreground="White" FontSize="30"/>
+                <Label Content="Activity" FontSize="25" Foreground="Gray" Margin="10"/>
+                <TextBlock Margin="10" FontFamily="{StaticResource Philosopher}" FontSize="25">
+                    <Hyperlink Command="{Binding OpenTextEditorCommand}">Mở trang viết</Hyperlink>
+                </TextBlock>
+                <Label FontFamily="{StaticResource Philosopher}" FontWeight="Light" Foreground="Gray" FontSize="14">
+                    Lưu ý: để chuyển font và kích cỡ chữ, hãy gõ một từ bất kì, bôi đen rồi mới đổi font. Không chuyển tab khi đang viết.
+                </Label>
+                <ContentControl x:Name="textEditor" MinHeight="600" Content="{Binding TextEditor}"/>
             </StackPanel>
             <ContentControl Grid.Row="1" Content="{Binding FooterView}"/>
         </Grid>

@@ -7,6 +7,8 @@ namespace PhiloStory2.Core
 	{
 		private Action<object> _execute;
 		private Func<object, bool> _canExecute;
+		
+
 
 		public event EventHandler? CanExecuteChanged
 		{
@@ -30,5 +32,12 @@ namespace PhiloStory2.Core
             _execute = execute;
 			_canExecute = canExecute;
         }
+
+		//common-use commands
+
+		private static void OpenWebPageViewer(string articleName)
+		{
+
+		}
     }
 }

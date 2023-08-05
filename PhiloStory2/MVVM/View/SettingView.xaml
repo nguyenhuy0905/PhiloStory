@@ -41,7 +41,21 @@
                         <Menu Height="35"
                               Width="360"
                               Background="Transparent">
-                            <MenuItem Header="Chỉnh sửa sở thích của bạn" Height="35" Width="360" Style="{StaticResource Main_MenuItem}" Foreground="{DynamicResource Text}"></MenuItem>
+                            <MenuItem Header="Chỉnh sửa sở thích của bạn" Height="35" Width="360" Style="{StaticResource Main_MenuItem}" Foreground="{DynamicResource Text}">
+                                <CheckBox Name="Favorite1" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite1}" Unchecked="FavoritieUnCheck" Checked="FavoritieCheck">Chủ nghĩa duy vật</CheckBox>
+                                <CheckBox Name="Favorite2" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite2}" Unchecked="FavoritieUnCheck" Checked="FavoritieCheck">Chủ nghĩa duy tâm</CheckBox>
+                                <CheckBox Name="Favorite3" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite3}" Unchecked="FavoritieUnCheck" Checked="FavoritieCheck">Chủ nghĩa hiện thực</CheckBox>
+                                <CheckBox Name="Favorite4" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite4}" Unchecked="FavoritieUnCheck" Checked="FavoritieCheck">Chủ nghĩa duy danh</CheckBox>
+                                <CheckBox Name="Favorite5" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite5}" Unchecked="FavoritieUnCheck" Checked="FavoritieCheck">Chủ nghĩa duy lý</CheckBox>
+                                <CheckBox Name="Favorite6" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite6}" Unchecked="FavoritieUnCheck" Checked="FavoritieCheck">Chủ nghĩa kinh nghiệm</CheckBox>
+                                <CheckBox Name="Favorite7" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite7}" Unchecked="FavoritieUnCheck" Checked="FavoritieCheck">Chủ nghĩa hoài nghi</CheckBox>
+                                <CheckBox Name="Favorite8" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite8}" Unchecked="FavoritieUnCheck" Checked="FavoritieCheck">Chủ nghĩa lý tưởng</CheckBox>
+                                <CheckBox Name="Favorite9" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite9}" Unchecked="FavoritieUnCheck" Checked="FavoritieCheck">Chủ nghĩa thực dụng</CheckBox>
+                                <CheckBox Name="Favorite10" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite10}" Unchecked="FavoritieUnCheck" Checked="FavoritieCheck">Hiện tượng học, thuyên thích học</CheckBox>
+                                <CheckBox Name="Favorite11" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite11}" Unchecked="FavoritieUnCheck" Checked="FavoritieCheck">Chủ nghĩa hiện sinh</CheckBox>
+                                <CheckBox Name="Favorite12" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite12}" Unchecked="FavoritieUnCheck" Checked="FavoritieCheck">Triết học phân tích</CheckBox>
+                                <CheckBox Name="Favorite13" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite13}" Unchecked="FavoritieUnCheck" Checked="FavoritieCheck">Chủ nghĩa</CheckBox>
+                            </MenuItem>
                         </Menu>
                     </Border>
                     <Rectangle Height="1" Width="400"  Margin="5,15,5,5" Fill="Gray"/>
@@ -61,8 +75,8 @@
                                           Height="35"
                                           Width="360"
                                           Header="Chế độ màn hình">
-                                    <MenuItem Header="CHẾ ĐỘ CƠ BẢN" FontSize="15" Click="NeutralMode"></MenuItem>
-                                    <MenuItem Header="CHẾ ĐỘ BAN ĐÊM" FontSize="15" Click="DarkMode" Foreground="White" Background="{DynamicResource Panel}"></MenuItem>
+                                    <RadioButton Content="CHẾ ĐỘ CƠ BẢN" FontSize="15" Checked="NeutralMode" IsChecked="{Binding NeutralMode}"></RadioButton>
+                                    <RadioButton Content="CHẾ ĐỘ BAN ĐÊM" FontSize="15" Checked="DarkMode" IsChecked="{Binding DarkMode}"></RadioButton>
                                 </MenuItem>
                             </MenuItem>
                         </Menu>

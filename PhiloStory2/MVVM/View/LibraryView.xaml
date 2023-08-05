@@ -39,7 +39,7 @@
             <Bold>Other topics</Bold>
             </TextBlock>
             <Grid Grid.Row="1">
-                <ScrollViewer PreviewMouseWheel="ScrollViewer_PreviewMouseWheel" Name="svHorizontal" Grid.Row="1" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible" Margin="0">
+                <ScrollViewer  Name="svHorizontal" Grid.Row="1" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible" Margin="0">
                     <StackPanel Orientation="Horizontal">
                         <Button Grid.Row="0"
                                     Width="115"

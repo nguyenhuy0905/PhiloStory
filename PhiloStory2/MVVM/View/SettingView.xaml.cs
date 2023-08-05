@@ -14,15 +14,15 @@ namespace PhiloStory2.MVVM.View
 	{
         Configuration AppConfig = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
         public SettingView()
-	{
-		InitializeComponent();
-            	var Data_read = AppConfig.GetSection("DataSave");
-            	this.DataContext = Data_read;
+		{
+			InitializeComponent();
+            var Data_read = AppConfig.GetSection("DataSave");
+            this.DataContext = Data_read;
         }
 
-	private void SettingButton_MouseEnter(object sender, RoutedEventArgs e)
-	{
-		SoundEffect.PlayMouseHover();
+		private void SettingButton_MouseEnter(object sender, RoutedEventArgs e)
+		{
+			SoundEffect.PlayMouseHover();
         }
 
         private void NeutralMode(object sender, RoutedEventArgs e)
@@ -59,6 +59,16 @@ namespace PhiloStory2.MVVM.View
         {
             Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true }); ;
             e.Handled = true;
+        }
+
+        private void FavoritieCheck(object sender, RoutedEventArgs e)
+        {
+            AppConfig.Save();
+        }
+
+        private void FavoritieUnCheck(object sender, RoutedEventArgs e)
+        {
+            AppConfig.Save();
         }
     }
 }

@@ -1,20 +1,11 @@
 using PhiloStory2.Core;
+using PhiloStory2.MVVM.ViewModel;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Configuration;
+using System.Windows;
+using System.Windows.Input;
+using PhiloStory2.Properties;
+
 namespace PhiloStory2
 {
 	/// <summary>
@@ -22,17 +13,20 @@ namespace PhiloStory2
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-		Configuration AppConfig = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+		private MainViewModel viewModel = new();
+		
 		public MainWindow()
 		{
 			InitializeComponent();
-            if (AppConfig.Sections["DataSave"] is null)
-            {
-                AppConfig.Sections.Add("DataSave", new DataSave());
-            }
-			var data_read = AppConfig.GetSection("DataSave");
-			
-        }
+			bool dtVal = (bool)Settings.Default["IsDarkTheme"];
+
+			if (dtVal)
+			{
+				SwitchTheme.ChangeTheme(new Uri("Theme/DarkTheme.xaml", UriKind.Relative));
+				return;
+			}
+			SwitchTheme.ChangeTheme(new Uri("Theme/NeutralTheme.xaml", UriKind.Relative));
+		}
 
 		private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
 		{

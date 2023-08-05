@@ -1,6 +1,7 @@
 ﻿using PhiloStory2.Core;
 using PhiloStory2.MVVM.ViewModel;
 using System;
+using System.Configuration;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -18,7 +19,7 @@ namespace PhiloStory2.MVVM.View
 		public HomeView()
 		{
 			InitializeComponent();
-			
+
 		}
 
 		private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)

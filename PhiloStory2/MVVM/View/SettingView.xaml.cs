@@ -1,4 +1,5 @@
 using PhiloStory2.Core;
+using PhiloStory2.Properties;
 using System;
 using System.Configuration;
 using System.Diagnostics;
@@ -12,13 +13,11 @@ namespace PhiloStory2.MVVM.View
 	/// </summary>
 	public partial class SettingView : UserControl
 	{
-        Configuration AppConfig = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
         public SettingView()
 		{
 			InitializeComponent();
-            var Data_read = AppConfig.GetSection("DataSave");
-            this.DataContext = Data_read;
-        }
+			
+		}
 
 		private void SettingButton_MouseEnter(object sender, RoutedEventArgs e)
 		{
@@ -27,15 +26,17 @@ namespace PhiloStory2.MVVM.View
 
         private void NeutralMode(object sender, RoutedEventArgs e)
         {
-            SwitchTheme.ChangeTheme(new Uri("Theme/NeutralTheme.xaml", UriKind.Relative));
-            AppConfig.Save();
+			SwitchTheme.ChangeTheme(new Uri("Theme/NeutralTheme.xaml", UriKind.Relative));
+            Settings.Default["IsDarkTheme"] = false;
+            Settings.Default.Save();
         }
 
         private void DarkMode(object sender, RoutedEventArgs e)
         {
             SwitchTheme.ChangeTheme(new Uri("Theme/DarkTheme.xaml", UriKind.Relative));
-            AppConfig.Save();
-        }
+			Settings.Default["IsDarkTheme"] = true;
+			Settings.Default.Save();
+		}
 
         private void hyperAboutUs_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
         {
@@ -63,12 +64,10 @@ namespace PhiloStory2.MVVM.View
 
         private void FavoritieCheck(object sender, RoutedEventArgs e)
         {
-            AppConfig.Save();
         }
 
         private void FavoritieUnCheck(object sender, RoutedEventArgs e)
         {
-            AppConfig.Save();
         }
     }
 }

@@ -22,8 +22,7 @@ namespace PhiloStory2.MVVM.ViewModel
 
 		public SettingViewModel() {
 		    FooterVM = new FooterViewModel();
-			FooterView = FooterVM;
-		
+			FooterView = FooterVM;		
 		}
 
 	

@@ -1,4 +1,5 @@
 ﻿using PhiloStory2.Core;
+using System.Configuration;
 
 namespace PhiloStory2.MVVM.ViewModel
 {
@@ -41,6 +42,8 @@ namespace PhiloStory2.MVVM.ViewModel
 			CurrentView = HomeVM;			
 			ActivityVM = new ActivityViewModel();
 			SettingVM = new SettingViewModel();
+
+			
 
 			NavHomeCommand = new(o =>
 			{

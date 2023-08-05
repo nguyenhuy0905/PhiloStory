@@ -1,4 +1,4 @@
-﻿using PhiloStory2.Core;
+using PhiloStory2.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.Configuration;
 namespace PhiloStory2
 {
 	/// <summary>
@@ -22,11 +22,17 @@ namespace PhiloStory2
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		Configuration AppConfig = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 		public MainWindow()
 		{
 			InitializeComponent();
+            if (AppConfig.Sections["DataSave"] is null)
+            {
+                AppConfig.Sections.Add("DataSave", new DataSave());
+            }
+			var data_read = AppConfig.GetSection("DataSave");
 			
-		}
+        }
 
 		private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
 		{

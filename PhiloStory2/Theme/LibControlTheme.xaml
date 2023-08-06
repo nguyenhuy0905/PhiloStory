@@ -6,15 +6,41 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Width="115" Height="115" Background="Gray" CornerRadius="10">
-                            <TextBox Text="Coming soon" Foreground="White" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                        </Border>
+                        <Border Name="border" Width="115" Height="115" Background="Gray" CornerRadius="10">
+                                <Label Content="{TemplateBinding Content}" Foreground="White" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <Border.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsMouseOver, ElementName=border}" Value="True">
+                                            <DataTrigger.EnterActions>
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="Height" To="145"/>
+                                                        <DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="Width" To="145"/>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </DataTrigger.EnterActions>
+                                            <DataTrigger.ExitActions>
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="Height" To="115"/>
+                                                        <DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="Width" To="115"/>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </DataTrigger.ExitActions>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            </Border>
                     </ControlTemplate>
                 </Setter.Value>
+                
             </Setter>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="0"/>
         </Style.Setters>
+        
     </Style>
     
 </ResourceDictionary>

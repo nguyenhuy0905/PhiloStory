@@ -26,8 +26,6 @@ namespace PhiloStory2.MVVM.ViewModel
 
         //public RelayCommand FontSizeChangedCommand => new(execute => FontSizeChanged());
 
-        private readonly TextEditorView textEditorView = new();
-
 
         public TextEditorViewModel()
         {

@@ -11,9 +11,9 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="150" ></RowDefinition>
+                <RowDefinition Height="200" ></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="550"></RowDefinition>
+                <RowDefinition Height="600"></RowDefinition>
                 <RowDefinition Height="200"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0"
@@ -23,7 +23,8 @@
                    Height="40"
                    Margin="20,10,0,0"
                    FontSize="24"
-                       FontFamily="{StaticResource Philosopher}"><Bold>Your Topics</Bold>
+                   Foreground="{DynamicResource Text}"
+                   FontFamily="{StaticResource Philosopher}"><Bold>Your Topics</Bold>
             </TextBlock>
             <StackPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0">
                 <TextBox Width="280" Style="{StaticResource SearchBar}" Opacity="0.7"/>
@@ -35,101 +36,102 @@
                    Height="40"
                    Margin="20,10,0,0"
                    FontSize="24"
-                       FontFamily="{StaticResource Philosopher}">
+                   Foreground="{DynamicResource Text}"
+                   FontFamily="{StaticResource Philosopher}">
             <Bold>Other topics</Bold>
             </TextBlock>
             <Grid Grid.Row="1">
-                <ScrollViewer  Name="svHorizontal" Grid.Row="1" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible" Margin="0">
+                <ScrollViewer  PreviewMouseWheel="ScrollViewer_PreviewMouseWheel" Name="svHorizontal" Grid.Row="1" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible" Margin="0">
                     <StackPanel Orientation="Horizontal">
-                        <Button Grid.Row="0"
-                                    Width="115"
-                                    Height="115" 
+                        <Button Grid.Row="0" 
                                     Margin="0,10,0,0"   
                                     HorizontalAlignment="Center"
+                                    Content="Coming Soon"
+                                    MouseEnter="Button_MouseEnter"
+                                    Style="{StaticResource YourTopicRadioButton}">
+                        </Button>
+                        <Button Grid.Row="0" 
+                                    Margin="0,10,0,0"   
+                                    HorizontalAlignment="Center"
+                                    Content="Coming Soon"
+                                MouseEnter="Button_MouseEnter"
                                     Style="{StaticResource YourTopicRadioButton}">
                         </Button>
                         <Button Grid.Row="0"
-                                    Width="115"
-                                    Height="115" 
                                     Margin="0,10,0,0"   
                                     HorizontalAlignment="Center"
+                                    Content="Coming Soon"
+                                MouseEnter="Button_MouseEnter"
                                     Style="{StaticResource YourTopicRadioButton}">
                         </Button>
                         <Button Grid.Row="0"
-                                    Width="115"
-                                    Height="115" 
                                     Margin="0,10,0,0"   
                                     HorizontalAlignment="Center"
+                                    Content="Coming Soon"
+                                MouseEnter="Button_MouseEnter"
                                     Style="{StaticResource YourTopicRadioButton}">
                         </Button>
                         <Button Grid.Row="0"
-                                    Width="115"
-                                    Height="115" 
                                     Margin="0,10,0,0"   
                                     HorizontalAlignment="Center"
+                                    Content="Coming Soon"
+                                MouseEnter="Button_MouseEnter"
                                     Style="{StaticResource YourTopicRadioButton}">
                         </Button>
                         <Button Grid.Row="0"
-                                    Width="115"
-                                    Height="115" 
                                     Margin="0,10,0,0"   
                                     HorizontalAlignment="Center"
+                                    Content="Coming Soon"
+                                MouseEnter="Button_MouseEnter"
                                     Style="{StaticResource YourTopicRadioButton}">
                         </Button>
                         <Button Grid.Row="0"
-                                    Width="115"
-                                    Height="115" 
                                     Margin="0,10,0,0"   
                                     HorizontalAlignment="Center"
+                                    Content="Coming Soon"
+                                MouseEnter="Button_MouseEnter"
+                                    Style="{StaticResource YourTopicRadioButton}">
+                        </Button>
+                        <Button Grid.Row="0" 
+                                    Margin="0,10,0,0"   
+                                    HorizontalAlignment="Center"
+                                    Content="Coming Soon"
+                                MouseEnter="Button_MouseEnter"
                                     Style="{StaticResource YourTopicRadioButton}">
                         </Button>
                         <Button Grid.Row="0"
-                                    Width="115"
-                                    Height="115" 
                                     Margin="0,10,0,0"   
                                     HorizontalAlignment="Center"
+                                    Content="Coming Soon"    
+                                MouseEnter="Button_MouseEnter"
                                     Style="{StaticResource YourTopicRadioButton}">
                         </Button>
                         <Button Grid.Row="0"
-                                    Width="115"
-                                    Height="115" 
                                     Margin="0,10,0,0"   
                                     HorizontalAlignment="Center"
+                                    Content="Coming Soon"    
+                                MouseEnter="Button_MouseEnter"
                                     Style="{StaticResource YourTopicRadioButton}">
                         </Button>
                         <Button Grid.Row="0"
-                                    Width="115"
-                                    Height="115" 
                                     Margin="0,10,0,0"   
+                                    Content="Coming Soon"
                                     HorizontalAlignment="Center"
+                                MouseEnter="Button_MouseEnter"
                                     Style="{StaticResource YourTopicRadioButton}">
                         </Button>
                         <Button Grid.Row="0"
-                                    Width="115"
-                                    Height="115" 
                                     Margin="0,10,0,0"   
+                                    Content="Coming Soon"
                                     HorizontalAlignment="Center"
+                                MouseEnter="Button_MouseEnter"
                                     Style="{StaticResource YourTopicRadioButton}">
                         </Button>
                         <Button Grid.Row="0"
-                                    Width="115"
-                                    Height="115" 
                                     Margin="0,10,0,0"   
+                                    Content="Coming Soon"
                                     HorizontalAlignment="Center"
-                                    Style="{StaticResource YourTopicRadioButton}">
-                        </Button>
-                        <Button Grid.Row="0"
-                                    Width="115"
-                                    Height="115" 
-                                    Margin="0,10,0,0"   
-                                    HorizontalAlignment="Center"
-                                    Style="{StaticResource YourTopicRadioButton}">
-                        </Button>
-                        <Button Grid.Row="0"
-                                    Width="115"
-                                    Height="115" 
-                                    Margin="0,10,0,0"   
-                                    HorizontalAlignment="Center"
+                                MouseEnter="Button_MouseEnter"
                                     Style="{StaticResource YourTopicRadioButton}">
                         </Button>
                     </StackPanel>
@@ -145,170 +147,175 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel>
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
+                            Tag="MythOfSisyphus" 
                         Margin="20,20,20,20"   
                         HorizontalAlignment="Center"
                         Style="{StaticResource YourTopicRadioButton}"
-                         >
+                         Content="Myth of Sisyphus"
+                            MouseEnter="Button_MouseEnter"
+                         PreviewMouseDown="Button_PreviewMouseDown">
                     </Button>
-                    <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
+                    <Button Grid.Row="0" 
                         Margin="20,0,20,20"   
                         HorizontalAlignment="Center"
                         Style="{StaticResource YourTopicRadioButton}"
-                         >
+                        Content="Existentialism"
+                            Tag="Existentialism"
+                            MouseEnter="Button_MouseEnter"
+                        PreviewMouseDown="Button_PreviewMouseDown">
                     </Button>
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,0,20,20"   
                         HorizontalAlignment="Center"
                         Style="{StaticResource YourTopicRadioButton}"
-                        >
+                            Content="Ethics"
+                            Tag="Ethics"
+                            MouseEnter="Button_MouseEnter"
+                        PreviewMouseDown="Button_PreviewMouseDown">
                     </Button>
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,0,20,20"   
                         HorizontalAlignment="Center"
                         Style="{StaticResource YourTopicRadioButton}"
+                            PreviewMouseDown="Button_PreviewMouseDown"
+                            Content="Memento Mori"
+                            Tag="MementoMori"
+                            MouseEnter="Button_MouseEnter"
                         >
                     </Button>
                 </StackPanel>
                 <StackPanel Grid.Column="1">
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,20,20,20"   
+                        Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         HorizontalAlignment="Center"
                         Style="{StaticResource YourTopicRadioButton}"
                          >
                     </Button>
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,0,20,20"   
                         HorizontalAlignment="Center"
+                            Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         Style="{StaticResource YourTopicRadioButton}"
                          >
                     </Button>
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,0,20,20"   
                         HorizontalAlignment="Center"
+                            Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         Style="{StaticResource YourTopicRadioButton}"
                         >
                     </Button>
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,0,20,20"   
                         HorizontalAlignment="Center"
+                            Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         Style="{StaticResource YourTopicRadioButton}"
                         >
                     </Button>
                 </StackPanel>
                 <StackPanel Grid.Column="2">
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,20,20,20"   
                         HorizontalAlignment="Center"
+                            Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         Style="{StaticResource YourTopicRadioButton}"
                          >
                     </Button>
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,0,20,20"   
                         HorizontalAlignment="Center"
+                            Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         Style="{StaticResource YourTopicRadioButton}"
                          >
                     </Button>
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,0,20,20"   
                         HorizontalAlignment="Center"
+                            Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         Style="{StaticResource YourTopicRadioButton}"
                         >
                     </Button>
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,0,20,20"   
                         HorizontalAlignment="Center"
+                            Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         Style="{StaticResource YourTopicRadioButton}"
                         >
                     </Button>
                 </StackPanel>
                 <StackPanel Grid.Column="3">
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,20,20,20"   
                         HorizontalAlignment="Center"
+                            Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         Style="{StaticResource YourTopicRadioButton}"
                          >
                     </Button>
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,0,20,20"   
                         HorizontalAlignment="Center"
+                            Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         Style="{StaticResource YourTopicRadioButton}"
                          >
                     </Button>
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,0,20,20"   
                         HorizontalAlignment="Center"
+                            Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         Style="{StaticResource YourTopicRadioButton}"
                         >
                     </Button>
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,0,20,20"   
                         HorizontalAlignment="Center"
+                            Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         Style="{StaticResource YourTopicRadioButton}"
                         >
                     </Button>
                 </StackPanel>
                 <StackPanel Grid.Column="4">
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,20,20,20"   
                         HorizontalAlignment="Center"
+                            Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         Style="{StaticResource YourTopicRadioButton}"
                          >
                     </Button>
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,0,20,20"   
                         HorizontalAlignment="Center"
+                            Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         Style="{StaticResource YourTopicRadioButton}"
                          >
                     </Button>
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,0,20,20"   
                         HorizontalAlignment="Center"
+                            Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         Style="{StaticResource YourTopicRadioButton}"
                         >
                     </Button>
                     <Button Grid.Row="0"
-                        Width="115"
-                        Height="115" 
                         Margin="20,0,20,20"   
                         HorizontalAlignment="Center"
+                            Content="Coming Soon"
+                            MouseEnter="Button_MouseEnter"
                         Style="{StaticResource YourTopicRadioButton}"
                         >
                     </Button>

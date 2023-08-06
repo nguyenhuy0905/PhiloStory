@@ -14,11 +14,11 @@
                 <RowDefinition Height="200"/>
             </Grid.RowDefinitions>
             <StackPanel>
-                <Label Content="Activity" FontSize="25" Foreground="Gray" Margin="10"/>
+                <Label Content="Activity" FontSize="25" Foreground="{DynamicResource Text}" Margin="10"/>
                 <TextBlock Margin="10" FontFamily="{StaticResource Philosopher}" FontSize="25">
                     <Hyperlink Command="{Binding OpenTextEditorCommand}">Mở trang viết</Hyperlink>
                 </TextBlock>
-                <Label FontFamily="{StaticResource Philosopher}" FontWeight="Light" Foreground="Gray" FontSize="14">
+                <Label FontFamily="{StaticResource Philosopher}" FontWeight="Light" Foreground="{DynamicResource Text}" FontSize="14">
                     Lưu ý: để chuyển font và kích cỡ chữ, hãy gõ một từ bất kì, bôi đen rồi mới đổi font. Không chuyển tab khi đang viết.
                 </Label>
                 <ContentControl x:Name="textEditor" MinHeight="600" Content="{Binding TextEditor}"/>

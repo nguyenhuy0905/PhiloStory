@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Articles\ethicbasics.rtf" />
     <None Remove="Assets\Fonts\._Philosopher-BoldItalic.otf" />
     <None Remove="Assets\Fonts\._Philosopher-Italic.otf" />
     <None Remove="Assets\Fonts\Philosopher-Bold.otf" />
@@ -34,6 +35,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Assets\Articles\ethicbasics.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Assets\Images\center-align.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

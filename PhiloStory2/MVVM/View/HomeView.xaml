@@ -88,21 +88,25 @@
                                                     PreviewMouseDown="ContentControl_PreviewMouseDown"
                                                      Tag="MythOfSisyphus">
                                         <ContentControl.Content>
-                                            <Image Source="/Assets/Images/socrates.png" Stretch="UniformToFill"/>
+                                            <Label Content="The myth of Sisyphus"/>
                                         </ContentControl.Content>
                                     </ContentControl>
                                     <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"
                                                     PreviewMouseDown="ContentControl_PreviewMouseDown"
                                                     Tag="MementoMori">
                                         <ContentControl.Content>
-                                            <Image Stretch="UniformToFill"/>
+                                            <Label Content="MementoMori"/>
                                             
                                         </ContentControl.Content>
                                     </ContentControl>
-                                    <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter">
+                                    <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"
+                                                    PreviewMouseDown="ContentControl_PreviewMouseDown"
+                                                    Content="Existentialism" Tag="Existentialism">
                                         
                                     </ContentControl>
-                                    <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"/>
+                                    <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"
+                                                    PreviewMouseDown="ContentControl_PreviewMouseDown"
+                                                    Content="Ethics" Tag="Ethics"/>
                                     <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"/>
                                     <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"/>
                                     <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"/>

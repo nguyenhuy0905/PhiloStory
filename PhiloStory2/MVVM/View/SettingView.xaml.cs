@@ -16,7 +16,7 @@ namespace PhiloStory2.MVVM.View
 	/// </summary>
 	public partial class SettingView : UserControl
 	{
-		private static List<string> names = new() { "Chủ nghĩa duy vật", "Chủ nghĩa duy tâm", "Chủ nghĩa hiện thực", "Chủ nghĩa duy danh", "Chủ nghĩa duy lý", "Chủ nghĩa kinh nghiệm",
+		private static readonly List<string> names = new() { "Chủ nghĩa duy vật", "Chủ nghĩa duy tâm", "Chủ nghĩa hiện thực", "Chủ nghĩa duy danh", "Chủ nghĩa duy lý", "Chủ nghĩa kinh nghiệm",
 		"Chủ nghĩa hoài nghi", "Chủ nghĩa lý tưởng", "Chủ nghĩa thực dụng", "Hiện tượng học, thuyên thích học", "Chủ nghĩa hiện sinh", "Triết học phân tích"};
 
         public SettingView()

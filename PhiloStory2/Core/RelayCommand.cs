@@ -34,10 +34,5 @@ namespace PhiloStory2.Core
         }
 
 		//common-use commands
-
-		private static void OpenWebPageViewer(string articleName)
-		{
-
-		}
     }
 }

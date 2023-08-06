@@ -13,8 +13,11 @@ namespace PhiloStory2.MVVM.ViewModel
 	{
 		public ObservableCollection<Article> Articles = new()
 			{
-				new() { Name = "MythOfSisyphus", Title = "The Myth of Sisyphus", Directory = basedir + "MythOfSisyphus.rtf" },
-				new() {Name = "MementoMori", Title = "Memento Mori", Directory = basedir + "MementoMori.rtf"}
+			//lưu ý đặt Name các bài viết khác nhau. 
+				new() { Name = "MythOfSisyphus", Title = "The Myth of Sisyphus", Directory = basedir + "MythOfSisyphus.rtf" }, //<-- Articles[0] hoặc Articles.First(x => x.Name == "MythOfSisyphus")
+				new() {Name = "MementoMori", Title = "Memento Mori", Directory = basedir + "MementoMori.rtf"},
+				new() { Name = "Existentialism", Title = "Khái quát - Chủ nghĩa Hiện sinh", Directory = basedir + "existent.rtf" },
+				new() { Name = "Ethics", Title="Khái quát - Luân lí học", Directory = basedir + "ethicbasics.rtf" }
 			};
 
 		private static string basedir = Environment.CurrentDirectory.Replace(@"bin\Debug\net7.0-windows", @"Assets\\Articles\\");

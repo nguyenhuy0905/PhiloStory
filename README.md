@@ -17,22 +17,22 @@ Requirements là máy chạy Windows, hoặc đang chạy giả lập Windows
 - Copy đường dẫn HTTPS của dự án vào
    
 # 4. Cách sử dụng app
-   - Đầu tiên, user vào trang Home, kéo xuống phần "Tạo tài khoản" dẫn ra Settings
-   - Vào Settings, nhập thông tin cơ bản để tạo tài khoản: Tên, avatar, sở thích
+   - Khi khởi chạy, user sẽ vào trang Home
+   - Vào Settings, nhập thông tin cơ bản để tạo tài khoản: Tên, sở thích
    - Chọn một bài viết để xem:
      + Cách 1: Mở tab Home, nhấn chọn bài viết ở dưới phần giới thiệu
-     + Cách 2: Mở tab Library, nhấn chọn bài viết mình đã chọn ở trên, hoặc chọn trong kho chủ đề ở dưới
+     + Cách 2: Mở tab Library (các ô đều đang để Coming Soon)
   - Tính năng Viết Nhật ký: vào mục Activity để tham khảo
   - Tùy chỉnh cài đặt:
-    + Chỉnh ava: 
-    + Chỉnh tên:
-    + Chế độ Sáng/Tối: Ấn vào
+    + Chỉnh tên
+    + Chế độ Sáng/Tối
+    + Sở thích
       
-5. Lưu ý
-- Sản phẩm đang trong quá trình hoàn thiện về mặt nội dung, có một số bài viết mẫu có thể tham khảo (chưa bao gồm những hoạt động có trong đề xuất). Có một phần Nhật ký nằm ở trang Activity
-- Những bài viết đang là placeholder để thay các chủ đề
+# 5. Lưu ý
+- Sản phẩm đang trong quá trình hoàn thiện về mặt nội dung, có một số bài viết mẫu có thể tham khảo (chưa bao gồm những hoạt động có trong đề xuất). Có một phần Nhật ký nằm ở trang Activity, nhấn vào dòng chữ để hiện.
+- Những bài viết đang là placeholder để thay các chủ đề, có thể tham khảo những chủ đề dự kiến của dự án ở tab Settings
 
-6. Credit:
+# 6. Credit:
 Sản phẩm được tạo bởi team Người Hà Nội, gồm có
 - Nguyễn Đức Huy: Hacker
 - Nguyễn Hoàng Duy: Hacker

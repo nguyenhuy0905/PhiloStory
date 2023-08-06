@@ -1,10 +1,13 @@
-using PhiloStory2.Core;
+﻿using PhiloStory2.Core;
+using PhiloStory2.MVVM.ViewModel;
 using PhiloStory2.Properties;
 using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace PhiloStory2.MVVM.View
 {
@@ -13,10 +16,22 @@ namespace PhiloStory2.MVVM.View
 	/// </summary>
 	public partial class SettingView : UserControl
 	{
+		private static List<string> names = new() { "Chủ nghĩa duy vật", "Chủ nghĩa duy tâm", "Chủ nghĩa hiện thực", "Chủ nghĩa duy danh", "Chủ nghĩa duy lý", "Chủ nghĩa kinh nghiệm",
+		"Chủ nghĩa hoài nghi", "Chủ nghĩa lý tưởng", "Chủ nghĩa thực dụng", "Hiện tượng học, thuyên thích học", "Chủ nghĩa hiện sinh", "Triết học phân tích"};
+
         public SettingView()
 		{
 			InitializeComponent();
-			
+			string prefix = "Favorite";
+			MenuItem mnp = (MenuItem)mnContentPref.FindName("mniPrefs");
+			FontFamily philo = (FontFamily)FindResource("Philosopher");
+			for (int i = 0; i<names.Count; i++)
+			{
+				CheckBox cb = new() {Name=prefix + (i+1).ToString(), Content = names[i], FontSize=15, FontFamily=philo, IsChecked = SettingViewModel.favorites[i] };
+				cb.Checked += (sender, e) => FavoritieChanged(sender, e);
+				cb.Unchecked += (sender, e) => FavoritieChanged(sender, e);
+				mnp.Items.Add(cb);				
+			}	
 		}
 
 		private void SettingButton_MouseEnter(object sender, RoutedEventArgs e)
@@ -38,172 +53,20 @@ namespace PhiloStory2.MVVM.View
 			Settings.Default.Save();
 		}
 
-        private void hyperAboutUs_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
+        private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
         {
             Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true }); ;
             e.Handled = true;
         }
-
-        private void hyperContact_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
-        {
-            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true }); ;
-            e.Handled = true;
-        }
-
-        private void hyperCourse_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
-        {
-            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true }); ;
-            e.Handled = true;
-        }
-
-        private void hyperFAQ_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
-        {
-            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true }); ;
-            e.Handled = true;
-        }
-
-        private void FavoritieCheck1(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite1"] = true;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieUnCheck1(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite1"] = false;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieCheck2(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite2"] = true;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieUnCheck2(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite2"] = false;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieCheck3(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite3"] = true;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieCheck4(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite4"] = true;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieCheck5(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite5"] = true;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieCheck6(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite6"] = true;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieCheck7(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite7"] = true;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieCheck8(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite8"] = true;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieCheck9(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite9"] = true;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieCheck10(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite10"] = true;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieCheck11(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite11"] = true;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieCheck12(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite12"] = true;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieUnCheck3(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite3"] = false;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieUnCheck4(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite4"] = false;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieUnCheck5(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite5"] = false;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieUnCheck6(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite6"] = false;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieUnCheck7(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite7"] = false;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieUnCheck8(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite8"] = false;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieUnCheck9(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite9"] = false;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieUnCheck10(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite10"] = false;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieUnCheck11(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite11"] = false;
-            Settings.Default.Save();
-        }
-
-        private void FavoritieUnCheck12(object sender, RoutedEventArgs e)
-        {
-            Settings.Default["Favorite12"] = false;
-            Settings.Default.Save();
-        }
-    }
+        
+		private void FavoritieChanged(object sender, RoutedEventArgs e)
+		{
+			if (sender is CheckBox cb)
+			{
+				string favoriteType = (sender as CheckBox).Name;
+				Settings.Default[favoriteType] = cb.IsChecked;
+				Settings.Default.Save();
+			}
+		}
+	}
 }

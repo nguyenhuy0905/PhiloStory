@@ -1,6 +1,7 @@
 using PhiloStory2.Core;
 using PhiloStory2.Properties;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
@@ -11,7 +12,11 @@ namespace PhiloStory2.MVVM.ViewModel
 	{
 		public FooterViewModel FooterVM { get; set; }
 
-		
+		public static List<bool> favorites = new();
+
+		public static readonly int FavoriteContentChoices = 13;
+
+		public static readonly string prefix = "Favorite";
 
 		private object footerView;
 
@@ -25,20 +30,15 @@ namespace PhiloStory2.MVVM.ViewModel
 
 		public SettingViewModel() {
 		    FooterVM = new FooterViewModel();
-			FooterView = FooterVM;		
+			FooterView = FooterVM;
+
+			string fullname;
+
+			for (int i = 1; i<= FavoriteContentChoices; i++)
+			{
+				fullname = prefix + i.ToString();
+				favorites.Add((bool)Settings.Default[fullname]);
+			}
 		}
-		public bool Favorite1 { get; set; } = (bool)Settings.Default["Favorite1"];
-	        public bool Favorite2 { get; set; } = (bool)Settings.Default["Favorite2"];
-	        public bool Favorite3 { get; set; } = (bool)Settings.Default["Favorite3"];
-	        public bool Favorite4 { get; set; } = (bool)Settings.Default["Favorite4"];
-	        public bool Favorite5 { get; set; } = (bool)Settings.Default["Favorite5"];
-	        public bool Favorite6 { get; set; } = (bool)Settings.Default["Favorite6"];
-	        public bool Favorite7 { get; set; } = (bool)Settings.Default["Favorite7"];
-	        public bool Favorite8 { get; set; } = (bool)Settings.Default["Favorite8"];
-	        public bool Favorite9 { get; set; } = (bool)Settings.Default["Favorite9"];
-	        public bool Favorite10 { get; set; } = (bool)Settings.Default["Favorite10"];
-	        public bool Favorite11 { get; set; } = (bool)Settings.Default["Favorite11"];
-	        public bool Favorite12 { get; set; } = (bool)Settings.Default["Favorite12"];
-	        public bool Favorite13 { get; set; } = (bool)Settings.Default["Favorite13"];
     	}
 }

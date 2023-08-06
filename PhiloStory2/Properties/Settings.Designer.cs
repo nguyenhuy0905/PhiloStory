@@ -25,13 +25,169 @@ namespace PhiloStory2.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool IsDarkTheme {
             get {
                 return ((bool)(this["IsDarkTheme"]));
             }
             set {
                 this["IsDarkTheme"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Favorite1 {
+            get {
+                return ((bool)(this["Favorite1"]));
+            }
+            set {
+                this["Favorite1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Favorite2 {
+            get {
+                return ((bool)(this["Favorite2"]));
+            }
+            set {
+                this["Favorite2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Favorite3 {
+            get {
+                return ((bool)(this["Favorite3"]));
+            }
+            set {
+                this["Favorite3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Favorite4 {
+            get {
+                return ((bool)(this["Favorite4"]));
+            }
+            set {
+                this["Favorite4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Favorite5 {
+            get {
+                return ((bool)(this["Favorite5"]));
+            }
+            set {
+                this["Favorite5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Favorite6 {
+            get {
+                return ((bool)(this["Favorite6"]));
+            }
+            set {
+                this["Favorite6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Favorite7 {
+            get {
+                return ((bool)(this["Favorite7"]));
+            }
+            set {
+                this["Favorite7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Favorite8 {
+            get {
+                return ((bool)(this["Favorite8"]));
+            }
+            set {
+                this["Favorite8"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Favorite9 {
+            get {
+                return ((bool)(this["Favorite9"]));
+            }
+            set {
+                this["Favorite9"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Favorite10 {
+            get {
+                return ((bool)(this["Favorite10"]));
+            }
+            set {
+                this["Favorite10"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Favorite11 {
+            get {
+                return ((bool)(this["Favorite11"]));
+            }
+            set {
+                this["Favorite11"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Favorite12 {
+            get {
+                return ((bool)(this["Favorite12"]));
+            }
+            set {
+                this["Favorite12"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Favorite13 {
+            get {
+                return ((bool)(this["Favorite13"]));
+            }
+            set {
+                this["Favorite13"] = value;
             }
         }
     }

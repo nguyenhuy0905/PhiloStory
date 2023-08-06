@@ -39,22 +39,11 @@
                             CornerRadius="10"
                             Background="{DynamicResource Panel}"
                             Margin="0,10,0,0">
-                        <Menu Height="35"
+                        <Menu Name="mnContentPref" Height="35"
                               Width="360"
                               Background="Transparent">
-                            <MenuItem Header="Chỉnh sửa sở thích của bạn" Height="35" Width="360" Style="{StaticResource Main_MenuItem}" Foreground="{DynamicResource Text}">
-                                <CheckBox Name="Favorite1" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite1}" Unchecked="FavoritieUnCheck1" Checked="FavoritieCheck1">Chủ nghĩa duy vật</CheckBox>
-                                <CheckBox Name="Favorite2" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite2}" Unchecked="FavoritieUnCheck2" Checked="FavoritieCheck2">Chủ nghĩa duy tâm</CheckBox>
-                                <CheckBox Name="Favorite3" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite3}" Unchecked="FavoritieUnCheck3" Checked="FavoritieCheck3">Chủ nghĩa hiện thực</CheckBox>
-                                <CheckBox Name="Favorite4" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite4}" Unchecked="FavoritieUnCheck4" Checked="FavoritieCheck4">Chủ nghĩa duy danh</CheckBox>
-                                <CheckBox Name="Favorite5" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite5}" Unchecked="FavoritieUnCheck5" Checked="FavoritieCheck5">Chủ nghĩa duy lý</CheckBox>
-                                <CheckBox Name="Favorite6" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite6}" Unchecked="FavoritieUnCheck6" Checked="FavoritieCheck6">Chủ nghĩa kinh nghiệm</CheckBox>
-                                <CheckBox Name="Favorite7" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite7}" Unchecked="FavoritieUnCheck7" Checked="FavoritieCheck7">Chủ nghĩa hoài nghi</CheckBox>
-                                <CheckBox Name="Favorite8" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite8}" Unchecked="FavoritieUnCheck8" Checked="FavoritieCheck8">Chủ nghĩa lý tưởng</CheckBox>
-                                <CheckBox Name="Favorite9" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite9}" Unchecked="FavoritieUnCheck9" Checked="FavoritieCheck9">Chủ nghĩa thực dụng</CheckBox>
-                                <CheckBox Name="Favorite10" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite10}" Unchecked="FavoritieUnCheck10" Checked="FavoritieCheck10">Hiện tượng học, thuyên thích học</CheckBox>
-                                <CheckBox Name="Favorite11" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite11}" Unchecked="FavoritieUnCheck11" Checked="FavoritieCheck11">Chủ nghĩa hiện sinh</CheckBox>
-                                <CheckBox Name="Favorite12" FontFamily="{StaticResource Philosopher}" FontSize="15" IsChecked="{Binding Favorite12}" Unchecked="FavoritieUnCheck12" Checked="FavoritieCheck12">Triết học phân tích</CheckBox>
+                            <MenuItem Name="mniPrefs" Header="Chỉnh sửa sở thích của bạn" Height="35" Width="360" Style="{DynamicResource Main_MenuItem}" Foreground="{DynamicResource Text}">
+                                
                             </MenuItem>
                         </Menu>
                     </Border>
@@ -93,7 +82,7 @@
                               Background="Transparent">
                             <MenuItem Header="FAQ" Height="35" Width="360" Style="{StaticResource Main_MenuItem}"  FontFamily="{StaticResource Philosopher}" FontSize="20" Foreground="{DynamicResource Text}">
                                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left"  Height="35" Width="280">
-                                    <Hyperlink Name="hyperFAQ" NavigateUri="https://www.google.com" RequestNavigate="hyperFAQ_RequestNavigate">
+                                    <Hyperlink Name="hyperFAQ" NavigateUri="https://www.google.com" RequestNavigate="Hyperlink_RequestNavigate">
                                         FAQ
                                     </Hyperlink>    
                                 </TextBlock>                                
@@ -112,17 +101,17 @@
                               Background="Transparent">
                             <MenuItem Foreground="{DynamicResource Text}" Header="Về chúng tôi" Height="35" Width="360" Style="{StaticResource Main_MenuItem}" FontFamily="{StaticResource Philosopher}" FontSize="20">
                                 <TextBlock Height="35" Width="360" VerticalAlignment="Center" HorizontalAlignment="Left" >
-                                    <Hyperlink Name="hyperAboutUs" NavigateUri="https://www.google.com" RequestNavigate="hyperAboutUs_RequestNavigate">
+                                    <Hyperlink Name="hyperAboutUs" NavigateUri="https://www.google.com" RequestNavigate="Hyperlink_RequestNavigate">
                                         Về chúng tôi
                                     </Hyperlink>
                                 </TextBlock>
                                 <TextBlock Height="35" Width="360" VerticalAlignment="Center" HorizontalAlignment="Left" >
-                                    <Hyperlink Name="hyperContact" NavigateUri="https://www.google.com" RequestNavigate="hyperContact_RequestNavigate">
+                                    <Hyperlink Name="hyperContact" NavigateUri="https://www.google.com" RequestNavigate="Hyperlink_RequestNavigate">
                                         Liên hệ
                                     </Hyperlink>
                                 </TextBlock>
                                 <TextBlock Height="35" Width="360" VerticalAlignment="Center" HorizontalAlignment="Left" >
-                                    <Hyperlink Name="hyperCourse" NavigateUri="https://www.google.com" RequestNavigate="hyperCourse_RequestNavigate">
+                                    <Hyperlink Name="hyperCourse" NavigateUri="https://www.google.com" RequestNavigate="Hyperlink_RequestNavigate">
                                         Khóa học
                                     </Hyperlink>
                                 </TextBlock>

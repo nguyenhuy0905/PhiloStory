@@ -18,6 +18,15 @@ namespace PhiloStory2.MVVM.ViewModel
 
 		public static readonly string prefix = "Favorite";
 
+		private string username = (string)Settings.Default["Username"];
+
+		public string Username
+		{
+			get { return username; }
+			set { username = value; OnPropertyChanged(); }
+		}
+
+
 		private object footerView;
 
 		public object FooterView
@@ -40,5 +49,7 @@ namespace PhiloStory2.MVVM.ViewModel
 				favorites.Add((bool)Settings.Default[fullname]);
 			}
 		}
+
+		
     	}
 }

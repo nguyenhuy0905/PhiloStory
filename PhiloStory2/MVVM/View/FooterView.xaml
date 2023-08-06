@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PhiloStory2.MVVM.View"
-             mc:Ignorable="d" Background="#f2f2f2"
+             mc:Ignorable="d" Background="{DynamicResource Footer}"
              d:DesignHeight="200" d:DesignWidth="1000">
 
     <UserControl.Resources>
@@ -30,7 +30,7 @@
                     <Image Source="/Assets/Images/mainicon.png"/>
                 </Label.Content>
             </Label>
-            <TextBlock Height="125" Width="250" TextWrapping="Wrap">
+            <TextBlock Height="125" Width="250" TextWrapping="Wrap" Foreground="{DynamicResource Text}">
                 <Run FontSize="25" FontWeight="Bold" FontFamily="{StaticResource Philosopher}">
                     PhiloStory
                 </Run>
@@ -66,7 +66,7 @@
         </StackPanel>
 
         <StackPanel Grid.Column="5" Margin="20,30,0,0">
-            <Label FontFamily="{StaticResource Philosopher}" FontSize="25" Content="Kết nối với chúng tôi qua" FontWeight="Bold"/>
+            <Label Foreground="{DynamicResource Text}" FontFamily="{StaticResource Philosopher}" FontSize="25" Content="Kết nối với chúng tôi qua" FontWeight="Bold"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                 <Border Style="{StaticResource MediaButtonAnimation}">
                     <Button Style="{StaticResource btnSocialMediaConnect}">

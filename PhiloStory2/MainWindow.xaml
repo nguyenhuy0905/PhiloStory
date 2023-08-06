@@ -48,7 +48,7 @@
             
 
             <!--NavBar-->
-            <Rectangle Grid.ColumnSpan="2" Fill="#96C4C3" Grid.Row="1"/>
+            <Rectangle Grid.ColumnSpan="2" Fill="{DynamicResource NavBar-Border}" Grid.Row="1"/>
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
                 <Button x:Name="btnIcon" Style="{StaticResource NavButton}" 
                     Width="50" BorderThickness="0"
@@ -77,7 +77,7 @@
                     Command="{Binding NavSettingCommand}" MouseEnter="NavButton_MouseEnter"/>
                 </Border>
             </StackPanel>
-            <Border Grid.Row="2" Grid.ColumnSpan="2" BorderThickness="5,0,5,5" BorderBrush="#96C4C3" CornerRadius="0,0,5,5">
+            <Border Grid.Row="2" Grid.ColumnSpan="2" BorderThickness="5,0,5,5" BorderBrush="{DynamicResource NavBar-Border}" CornerRadius="0,0,5,5">
                 
             </Border>
             <ContentControl Panel.ZIndex="1" Margin="5,0,5,5" Grid.Row="2" Grid.ColumnSpan="2" Content="{Binding CurrentView}">

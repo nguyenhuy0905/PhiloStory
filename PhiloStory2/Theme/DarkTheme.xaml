@@ -6,6 +6,8 @@
     <SolidColorBrush Color="#f2f2f2" x:Key="Text"/>
     <SolidColorBrush Color="#474E68" x:Key="Panel"/>
     <SolidColorBrush Color="#474E68" x:Key="QuotePanel"/>
+    <SolidColorBrush Color="#4b4c5b" x:Key="NavBar-Border"/>
+    <SolidColorBrush Color="#4b4c5b" x:Key="Footer"/>
 
 
 </ResourceDictionary>

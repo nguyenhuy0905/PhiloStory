@@ -45,6 +45,12 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <Style TargetType="Label" x:Key="placeholder">
+            <Setter Property="FontFamily" Value="{StaticResource Philosopher}"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
     </UserControl.Resources>
     
     <Border>
@@ -88,25 +94,27 @@
                                                     PreviewMouseDown="ContentControl_PreviewMouseDown"
                                                      Tag="MythOfSisyphus">
                                         <ContentControl.Content>
-                                            <Label Content="The myth of Sisyphus"/>
+                                            <Label Style="{StaticResource placeholder}" Content="The myth of Sisyphus"/>
                                         </ContentControl.Content>
                                     </ContentControl>
                                     <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"
                                                     PreviewMouseDown="ContentControl_PreviewMouseDown"
                                                     Tag="MementoMori">
                                         <ContentControl.Content>
-                                            <Label Content="MementoMori"/>
+                                            <Label Style="{StaticResource placeholder}" Content="MementoMori"/>
                                             
                                         </ContentControl.Content>
                                     </ContentControl>
                                     <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"
                                                     PreviewMouseDown="ContentControl_PreviewMouseDown"
-                                                    Content="Existentialism" Tag="Existentialism">
-                                        
+                                                    Tag="Existentialism">
+                                        <Label Content="Existentialism" Style="{StaticResource placeholder}"/>
                                     </ContentControl>
                                     <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"
                                                     PreviewMouseDown="ContentControl_PreviewMouseDown"
-                                                    Content="Ethics" Tag="Ethics"/>
+                                                    Tag="Ethics">
+                                        <Label Content="Ethics" Style="{StaticResource placeholder}"/>
+                                    </ContentControl>
                                     <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"/>
                                     <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"/>
                                     <ContentControl Style="{StaticResource StoryBorderTheme}" MouseEnter="ContentControl_MouseEnter"/>
@@ -141,7 +149,7 @@
                         <LineBreak/>
                         <Run FontSize="25" Foreground="{StaticResource Text}">
                             Sử dụng mục "Library", các bạn có thể tìm kiếm chủ đề, bài viết mình yêu thích
-                        </Run>
+                        </Run><LineBreak/>
                         </TextBlock>
                     </Grid>
 
@@ -161,7 +169,9 @@
                         </Run>
                         </TextBlock>
                         <Border Grid.Column="1" Margin="45" Background="#f2f2f2"
-                            BorderBrush="Gray" BorderThickness="2"></Border>
+                            BorderBrush="Gray" BorderThickness="2">
+                            <Image Source="/Assets/Images/book.png" />
+                        </Border>
                     </Grid>
                 </StackPanel>
                 <ContentControl Grid.Row="1" VerticalAlignment="Top" Height="200" Content="{Binding FooterView}"/>

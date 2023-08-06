@@ -68,5 +68,17 @@ namespace PhiloStory2.MVVM.View
 				Settings.Default.Save();
 			}
 		}
+
+		private void btnChangeUsername_Click(object sender, RoutedEventArgs e)
+		{
+			this.lblUsername.IsEnabled = true;
+        }
+
+		private void btnSaveInfo_Click(object sender, RoutedEventArgs e)
+		{
+			Settings.Default["Username"] = this.lblUsername.Text;
+			Settings.Default.Save();
+			this.lblUsername.IsEnabled = false;
+		}
 	}
 }

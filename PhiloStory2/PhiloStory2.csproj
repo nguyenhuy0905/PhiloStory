@@ -15,6 +15,7 @@
     <None Remove="Assets\Fonts\Philosopher-BoldItalic.otf" />
     <None Remove="Assets\Fonts\Philosopher-Italic.otf" />
     <None Remove="Assets\Fonts\Philosopher-Regular.otf" />
+    <None Remove="Assets\Images\book.png" />
     <None Remove="Assets\Images\bookshelf.png" />
     <None Remove="Assets\Images\center-align.png" />
     <None Remove="Assets\Images\disk.png" />
@@ -28,7 +29,6 @@
     <None Remove="Assets\Images\paint-bucket.png" />
     <None Remove="Assets\Images\redo-arrow.png" />
     <None Remove="Assets\Images\right-align.png" />
-    <None Remove="Assets\Images\socrates.png" />
     <None Remove="Assets\Images\undo-arrow.png" />
     <None Remove="Assets\Images\yticon.png" />
     <None Remove="Assets\Sounds\mousehover.wav" />
@@ -38,6 +38,9 @@
     <Content Include="Assets\Articles\ethicbasics.rtf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Assets\Images\book.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\Images\center-align.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -102,9 +105,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Images\right-align.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Images\socrates.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Images\undo-arrow.png">

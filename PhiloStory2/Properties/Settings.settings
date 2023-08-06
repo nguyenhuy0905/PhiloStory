@@ -44,5 +44,8 @@
     <Setting Name="Favorite13" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="Username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">username</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

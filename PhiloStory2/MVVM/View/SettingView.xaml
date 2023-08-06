@@ -27,9 +27,12 @@
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="20,30,0,0">
                     <Ellipse x:Name="avaHolder" Fill="LightGray" Width="200" Height="125"/>
                     <Button x:Name="btnChangeAva" Margin="0,10,0,0" Foreground="{DynamicResource Text}" Content="Thay đổi hình ảnh" Style="{StaticResource TransparentSettingButton}"/>
-                    <Label x:Name="lblUsername" Content="Tên người dùng" Foreground="{DynamicResource Text}" FontSize="25" FontFamily="{StaticResource Philosopher}"/>
-                    <Button x:Name="btnChangeUsername" Margin="0,10,0,0" Foreground="{DynamicResource Text}" Content="Đổi tên" Style="{StaticResource TransparentSettingButton}"/>
-                    <Button x:Name="btnSaveInfo" Content="Lưu" Foreground="{DynamicResource Text}" FontFamily="{StaticResource Philosopher}" FontSize="25" Background="Transparent" BorderThickness="0"/>
+                    <TextBox x:Name="lblUsername" IsEnabled="False" Width="150" TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="{DynamicResource Text}" FontSize="25" Background="Transparent" FontFamily="{StaticResource Philosopher}"
+                             Text="{Binding Username}"/>
+                    <Button x:Name="btnChangeUsername" Margin="0,10,0,0" Foreground="{DynamicResource Text}" Content="Đổi tên" Style="{StaticResource TransparentSettingButton}"
+                            Click="btnChangeUsername_Click"/>
+                    <Button x:Name="btnSaveInfo" Content="Lưu" Foreground="{DynamicResource Text}" FontFamily="{StaticResource Philosopher}" FontSize="25" Background="Transparent" BorderThickness="0"
+                            Click="btnSaveInfo_Click"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="10,50,0,0" Grid.Column="1">
                     <Border Height="45"

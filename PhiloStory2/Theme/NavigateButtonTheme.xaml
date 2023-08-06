@@ -9,7 +9,6 @@
                 <Trigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" To="#8db5b4"/>
                             <DoubleAnimation Duration="0:0:0.25" Storyboard.TargetProperty="Width" To="125">
                                 <DoubleAnimation.EasingFunction>
                                     <CircleEase/>
@@ -27,7 +26,6 @@
                 <Trigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0.4" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" To="#96C4C3"/>
                             <DoubleAnimation Duration="0:0:0.25" Storyboard.TargetProperty="Width" To="100">
                                 <DoubleAnimation.EasingFunction>
                                     <CircleEase/>
@@ -63,7 +61,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="BorderBrush" Value="#8db5b4" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="Transparent" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

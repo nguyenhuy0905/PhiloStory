@@ -16,6 +16,7 @@ namespace PhiloStory2.MVVM.View
 
 	public partial class HomeView : UserControl
 	{
+
 		public HomeView()
 		{
 			InitializeComponent();
@@ -50,7 +51,6 @@ namespace PhiloStory2.MVVM.View
 			{
 				ArticleReaderViewModel ArticleReaderVM = new((string)cc.Tag);		
 			}
-
         }
-    }
+	}
 }

@@ -62,12 +62,148 @@ namespace PhiloStory2.MVVM.View
             e.Handled = true;
         }
 
-        private void FavoritieCheck(object sender, RoutedEventArgs e)
+        private void FavoritieCheck1(object sender, RoutedEventArgs e)
         {
+            Settings.Default["Favorite1"] = true;
+            Settings.Default.Save();
         }
 
-        private void FavoritieUnCheck(object sender, RoutedEventArgs e)
+        private void FavoritieUnCheck1(object sender, RoutedEventArgs e)
         {
+            Settings.Default["Favorite1"] = false;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieCheck2(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite2"] = true;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieUnCheck2(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite2"] = false;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieCheck3(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite3"] = true;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieCheck4(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite4"] = true;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieCheck5(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite5"] = true;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieCheck6(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite6"] = true;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieCheck7(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite7"] = true;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieCheck8(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite8"] = true;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieCheck9(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite9"] = true;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieCheck10(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite10"] = true;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieCheck11(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite11"] = true;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieCheck12(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite12"] = true;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieUnCheck3(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite3"] = false;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieUnCheck4(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite4"] = false;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieUnCheck5(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite5"] = false;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieUnCheck6(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite6"] = false;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieUnCheck7(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite7"] = false;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieUnCheck8(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite8"] = false;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieUnCheck9(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite9"] = false;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieUnCheck10(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite10"] = false;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieUnCheck11(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite11"] = false;
+            Settings.Default.Save();
+        }
+
+        private void FavoritieUnCheck12(object sender, RoutedEventArgs e)
+        {
+            Settings.Default["Favorite12"] = false;
+            Settings.Default.Save();
         }
     }
 }

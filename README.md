@@ -15,6 +15,7 @@ Requirements là máy chạy Windows, hoặc đang chạy giả lập Windows
 - Trong phần cài đặt chọn ".NET desktop development", tiến hành cài đặt
 - Vào Visual Studios, bấm Clone a repository
 - Copy đường dẫn HTTPS của dự án vào
+- Ấn Ctrl + F5 để khởi chạy dự án
    
 # 4. Cách sử dụng app
    - Khi khởi chạy, user sẽ vào trang Home
@@ -30,6 +31,7 @@ Requirements là máy chạy Windows, hoặc đang chạy giả lập Windows
       
 # 5. Lưu ý
 - Sản phẩm đang trong quá trình hoàn thiện về mặt nội dung, có một số bài viết mẫu có thể tham khảo (chưa bao gồm những hoạt động có trong đề xuất). Có một phần Nhật ký nằm ở trang Activity, nhấn vào dòng chữ để hiện.
+- Các bài viết hiện đang xuất hiện dưới dạng popup, ấn vào dấu X trên cùng để thoát
 - Những bài viết đang là placeholder để thay các chủ đề, có thể tham khảo những chủ đề dự kiến của dự án ở tab Settings
 
 # 6. Credit:
